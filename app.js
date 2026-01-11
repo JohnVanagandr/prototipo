@@ -18,9 +18,9 @@ let path = window.location.pathname;
  * Tomamos el primer elemento del arreglo
  */
 // Para trabajar en local
-menuState.path = path.slice(1).split(".")[0];
+// menuState.path = path.slice(1).split(".")[0];
 // Para trabajar en Github | Pendiente de pasar al bundle
-// menuState.path = path.slice(1).split(".")[0].split("/")[1];
+menuState.path = path.slice(1).split(".")[0].split("/")[1];
 
 const toggleMenu = () => {
   sidebar.classList.toggle("open");
@@ -64,7 +64,9 @@ sidebar.addEventListener("click", (event) => {
   const route = link.getAttribute("data-route");
   toggleIcon(route);
   // Redirige al usuario
-  window.location.href = `/${route}.html`;  
+  // window.location.href = `/${route}.html`;  
+  // Ajuste solo para validar el github y poder compartirlo (temporal)
+  window.location.href = `prototipo/${route}.html`;  
   toggleMenu();
 });
 
