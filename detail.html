@@ -102,60 +102,52 @@
           <h1>Detalle de la tarea</h1>
         </header>
       
-        <article class="task-detail-card">
-      
-          <h2 class="task-title">
-            Preparar presentación del proyecto
-          </h2>
-      
-          <div class="task-meta">
-      
-            <span class="badge">Trabajo</span>
-            <span class="badge badge--alta">Alta</span>
-            <span class="badge badge--warning">Pendiente</span>
-      
-          </div>
-      
-          <div class="task-info">
-      
-            <div class="info-row">
-              <span class="label">Categoría</span>
-              <span class="value">Trabajo</span>
+        <article class="card-detail">
+          <header class="card-detail__header">
+            <h2 class="card-detail__title">
+              Preparar presentación del proyecto
+            </h2>
+            <button class="btn btn--icon text-danger">
+              <i class='bx bxs-trash'></i>
+            </button>
+          </header>
+          <div class="card-detail__body">
+            <div class="card-detail-meta">
+              <span class="badge">Trabajo</span>
+              <span class="badge badge--alta">Alta</span>
+              <span class="badge badge--warning">Pendiente</span>
             </div>
-      
-            <div class="info-row">
-              <span class="label">Importancia</span>
-              <span class="value">Alta</span>
+            <div class="card-detail-info">
+              <div class="info-row">
+                <span class="info-row__lavel">Categoría</span>
+                <span class="value">Trabajo</span>
+              </div>
+              <div class="info-row">
+                <span class="info-row__lavel">Importancia</span>
+                <span class="value">Alta</span>
+              </div>
+              <div class="info-row">
+                <span class="info-row__lavel">Fecha límite</span>
+                <span class="value">20 de octubre de 2026</span>
+              </div>
+            </div>      
+            <div class="">
+              <h3 class="card-detail-content-title">Descripción</h3>
+              <p class="card-detail-content-text">
+                Preparar las diapositivas del proyecto final, incluyendo objetivos,
+                alcance, arquitectura y conclusiones.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores iure reiciendis facere dolorum magnam, nulla quos dolores aperiam deserunt maxime. Delectus soluta vero quia expedita consectetur. Perferendis numquam ducimus tenetur?
+              </p>
             </div>
-      
-            <div class="info-row">
-              <span class="label">Fecha límite</span>
-              <span class="value">20 de octubre de 2026</span>
-            </div>
-      
           </div>
-      
-          <div class="task-content">
-            <h3>Descripción</h3>
-            <p>
-              Preparar las diapositivas del proyecto final, incluyendo objetivos,
-              alcance, arquitectura y conclusiones.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores iure reiciendis facere dolorum magnam, nulla quos dolores aperiam deserunt maxime. Delectus soluta vero quia expedita consectetur. Perferendis numquam ducimus tenetur?
-            </p>
-          </div>
-      
-
-            <footer class="task-actions">
-            
-              <button class="btn btn--primary">
-                Marcar como culminada
-              </button>
-            
-              <a href="task.html" class="btn btn--link">
-                Editar tarea
-              </a>
-            
-            </footer>
+          <footer class="card-detail-footer">
+            <button class="btn btn--primary">
+              Marcar como culminada
+            </button>
+            <a href="task.html" class="btn btn--link">
+              Editar tarea
+            </a>
+          </footer>
         </article>
       
       </section>

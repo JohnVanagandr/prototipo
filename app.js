@@ -18,9 +18,9 @@ let path = window.location.pathname;
  * Tomamos el primer elemento del arreglo
  */
 // Para trabajar en local
-// menuState.path = path.slice(1).split(".")[0];
+menuState.path = path.slice(1).split(".")[0];
 // Para trabajar en Github | Pendiente de pasar al bundle
-menuState.path = path.slice(1).split(".")[0].split("/")[1];
+// menuState.path = path.slice(1).split(".")[0].split("/")[1];
 
 const toggleMenu = () => {
   sidebar.classList.toggle("open");

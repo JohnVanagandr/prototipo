@@ -2,106 +2,10 @@
 
 .task-detail-header {
   margin: 0 auto;
-  margin-bottom: 1.2rem;
   padding: 0.8rem 0.5rem;
 }
 
 .task-detail-header h1 {
   font-size: 1.1rem;
   margin: 0;
-}
-
-.task-detail-card {
-  background: var(--color-surface);
-  padding: 1.8rem;
-  border-radius: 14px;
-  box-shadow: var(--shadow-xs);
-}
-
-.task-title {
-  margin: 0 0 var(--space-sm);
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.task-meta {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.2rem;
-}
-
-.priority.high {
-  background: #ffe1e1;
-}
-
-.status.pending {
-  background: #fff3cd;
-}
-
-.task-info {
-  display: grid;
-  gap: 0.6rem;
-  margin-bottom: 1.4rem;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-}
-
-.label {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: #555;
-}
-
-
-.task-content h3 {
-  margin: 0 0 0.4rem;
-  font-size: 0.9rem;
-}
-
-.task-content p {
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.task-actions {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-complete {
-  background: #1e1e1e;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-complete:hover {
-  opacity: 0.9;
-}
-
-.edit-task-link {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #555;
-}
-
-
-@media (max-width: 480px) {
-  .task-detail-card {
-    padding: 1.2rem;
-  }
 }

@@ -28,7 +28,6 @@
 
 .tasks-filters {
   display: grid;
-  gap: var(--space-md);
   grid-template-columns: 1fr;
 }
 
@@ -38,22 +37,20 @@
 }
 
 .priority-high .task-priority {
-  background-color: #fee2e2;
   color: #b91c1c;
 }
 
 .priority-medium .task-priority {
-  background-color: #fef3c7;
   color: #92400e;
 }
 
 .priority-low .task-priority {
-  background-color: #d1fae5;
   color: #065f46;
 }
 
 @media (min-width: 768px) {
   .tasks-filters {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
   }
 }
