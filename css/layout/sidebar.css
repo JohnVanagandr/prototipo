@@ -5,12 +5,15 @@
   width: var(--layout-sidebar-width);
   height: 100vh;
   background: var(--color-gray-100);
-  padding: var(--space-md);
-  padding-top: 2px;
+  padding: 0 var(--space-md);
   transform: translateX(-100%);
   transition: transform var(--transition-base);
   z-index: 1000;
-  border-right: var(--border-default)
+  border-right: var(--border-default);
+  overflow: overlay;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar.open {
@@ -23,6 +26,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  flex: 0 0 auto;
 }
 
 .sidebar__header span {
@@ -53,14 +57,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1 1 auto;
 }
 
 .user-card {
   background-color: var(--color-primary);
   border-radius: var(--border-radius-md);
-  padding: var(--space-md);
+  padding: var(--space-sm);
   color: var(--color-text-primary);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   border: var(--border-default);
 }
 
@@ -83,7 +88,7 @@
 }
 
 .view-profile-btn {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
   background-color: var(--color-secondary);
   color: var(--color-primary);
   border: none;
@@ -101,7 +106,7 @@
 }
 
 .user-card__body {
-  margin-top: 0.75rem;
+  margin-top: var(--space-sm);
 }
 
 .user-name {
@@ -126,6 +131,7 @@
   align-items: center;
   gap: var(--space-sm);
   padding: 0.85rem 1rem;
+  margin-bottom: var(--space-sm);
   border-radius: var(--border-radius-md);
   background: var(--color-surface);
   border: var(--border-default);
@@ -165,6 +171,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .logout button i, .logout button span {

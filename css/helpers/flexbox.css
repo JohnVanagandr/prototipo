@@ -143,6 +143,11 @@
    Flex – Basis
    ========================= */
 
+.flex-fill {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
