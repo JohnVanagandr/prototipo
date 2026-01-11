@@ -65,8 +65,7 @@ sidebar.addEventListener("click", (event) => {
   toggleIcon(route);
   // Redirige al usuario
   // window.location.href = `/${route}.html`;  
-  // Ajuste solo para validar el github y poder compartirlo (temporal)
-  window.location.href = `prototipo/${route}.html`;  
+  window.location.href = `${route}.html`;  
   toggleMenu();
 });
 
