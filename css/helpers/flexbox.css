@@ -1,0 +1,447 @@
+/* =========================
+   Flex – Base
+   ========================= */
+
+.flex {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+/* =========================
+   Flex – Direction
+   ========================= */
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* =========================
+   Flex – Justify Content
+   ========================= */
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* =========================
+   Flex – Align Items
+   ========================= */
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+/* =========================
+   Flex – Align Self
+   ========================= */
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+/* =========================
+   Flex – Wrap
+   ========================= */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* =========================
+   Flex – Grow / Shrink
+   ========================= */
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* =========================
+   Flex – Basis
+   ========================= */
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-initial {
+  flex: 0 1 auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+/* =========================
+   Flex – Gap
+   ========================= */
+
+.gap-xs {
+  gap: var(--space-xs);
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
+  gap: var(--space-lg);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
+}
+
+/* =========================
+   Flex – Common Patterns
+   ========================= */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* sm: 640px */
+@media (min-width: 640px) {
+
+  /* Dirección */
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .sm\:flex-column {
+    flex-direction: column;
+  }
+
+  .sm\:flex-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* Justify */
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:justify-around {
+    justify-content: space-around;
+  }
+
+  .sm\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  /* Align items */
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:items-end {
+    align-items: flex-end;
+  }
+
+  .sm\:items-stretch {
+    align-items: stretch;
+  }
+
+  .sm\:items-baseline {
+    align-items: baseline;
+  }
+
+  /* Align self */
+  .sm\:self-start {
+    align-self: flex-start;
+  }
+
+  .sm\:self-center {
+    align-self: center;
+  }
+
+  .sm\:self-end {
+    align-self: flex-end;
+  }
+
+  .sm\:self-stretch {
+    align-self: stretch;
+  }
+
+  /* Wrap */
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .sm\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .sm\:flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  /* Grow / Shrink */
+  .sm\:flex-grow {
+    flex-grow: 1;
+  }
+
+  .sm\:flex-grow-0 {
+    flex-grow: 0;
+  }
+
+  .sm\:flex-shrink {
+    flex-shrink: 1;
+  }
+
+  .sm\:flex-shrink-0 {
+    flex-shrink: 0;
+  }
+
+  /* Basis */
+  .sm\:flex-auto {
+    flex: 1 1 auto;
+  }
+
+  .sm\:flex-initial {
+    flex: 0 1 auto;
+  }
+
+  .sm\:flex-none {
+    flex: none;
+  }
+
+  /* Gap */
+  .sm\:gap-xs {
+    gap: var(--space-xs);
+  }
+
+  .sm\:gap-sm {
+    gap: var(--space-sm);
+  }
+
+  .sm\:gap-md {
+    gap: var(--space-md);
+  }
+
+  .sm\:gap-lg {
+    gap: var(--space-lg);
+  }
+
+  .sm\:gap-xl {
+    gap: var(--space-xl);
+  }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:flex-column {
+    flex-direction: column;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:gap-md {
+    gap: var(--space-md);
+  }
+
+  .md\:gap-lg {
+    gap: var(--space-lg);
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:flex-column {
+    flex-direction: column;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:items-stretch {
+    align-items: stretch;
+  }
+
+  .lg\:gap-lg {
+    gap: var(--space-lg);
+  }
+
+  .lg\:gap-xl {
+    gap: var(--space-xl);
+  }
+}
+
+/* xl: 1280px */
+@media (min-width: 1280px) {
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:flex-column {
+    flex-direction: column;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+
+  .xl\:items-center {
+    align-items: center;
+  }
+
+  .xl\:gap-xl {
+    gap: var(--space-xl);
+  }
+}

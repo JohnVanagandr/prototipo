@@ -1,0 +1,71 @@
+.auth-welcome {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-app);
+}
+
+.auth-container {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: var(--border-soft);
+}
+
+.auth-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.auth-header p {
+  margin: 0.5rem 0 2rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.auth-links {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-links a {
+  font-size: 0.75rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+.auth-links span {
+  font-size: 0.7rem;
+  color: #777;
+}
+
+
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 3rem;
+  }
+}

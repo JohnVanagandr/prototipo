@@ -1,0 +1,167 @@
+/* =========================
+   Background – Surfaces
+   ========================= */
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-surface-muted {
+  background-color: var(--color-surface-muted);
+}
+
+.bg-surface-soft {
+  background-color: var(--color-surface-soft);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* =========================
+   Background – Semantic
+   ========================= */
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-info {
+  background-color: var(--color-info);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-danger {
+  background-color: var(--color-danger);
+}
+
+/* =========================
+   Background – Soft
+   ========================= */
+
+.bg-primary-soft {
+  background-color: var(--color-yellow-100);
+}
+
+.bg-info-soft {
+  background-color: var(--color-blue-100);
+}
+
+.bg-success-soft {
+  background-color: var(--color-green-100);
+}
+
+.bg-warning-soft {
+  background-color: var(--color-orange-100);
+}
+
+.bg-danger-soft {
+  background-color: var(--color-red-100);
+}
+
+/* =========================
+   Background – Neutral
+   ========================= */
+
+.bg-white {
+  background-color: var(--color-white-50);
+}
+
+.bg-light {
+  background-color: var(--color-gray-100);
+}
+
+.bg-muted {
+  background-color: var(--color-gray-200);
+}
+
+.bg-dark {
+  background-color: var(--color-dark-500);
+}
+
+.bg-darker {
+  background-color: var(--color-dark-700);
+}
+
+/* =========================
+   Background – Color Scale
+   ========================= */
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+}
+
+.bg-gray-300 {
+  background-color: var(--color-gray-300);
+}
+
+.bg-blue-100 {
+  background-color: var(--color-blue-100);
+}
+
+.bg-blue-200 {
+  background-color: var(--color-blue-200);
+}
+
+.bg-green-100 {
+  background-color: var(--color-green-100);
+}
+
+.bg-red-100 {
+  background-color: var(--color-red-100);
+}
+
+.bg-orange-100 {
+  background-color: var(--color-orange-100);
+}
+
+/* =========================
+   Background – Gradients
+   ========================= */
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg,
+      var(--color-yellow-500),
+      var(--color-yellow-600));
+}
+
+.bg-gradient-info {
+  background: linear-gradient(135deg,
+      var(--color-blue-500),
+      var(--color-blue-600));
+}
+
+/* =========================
+   Background – Overlay
+   ========================= */
+
+.bg-overlay-light {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.bg-overlay-dark {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Background – Combo
+   ========================= */
+
+.bg-primary.text-inverse {
+  color: var(--color-dark-800);
+}
+
+.bg-dark.text-inverse {
+  color: var(--color-white-50);
+}

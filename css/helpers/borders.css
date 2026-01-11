@@ -1,0 +1,182 @@
+/* =========================
+   Borders – Width
+   ========================= */
+
+.border {
+  border-width: var(--border-width-sm);
+  border-style: solid;
+}
+
+.border-xs {
+  border-width: var(--border-width-xs);
+  border-style: solid;
+}
+
+.border-sm {
+  border-width: var(--border-width-sm);
+  border-style: solid;
+}
+
+.border-md {
+  border-width: var(--border-width-md);
+  border-style: solid;
+}
+
+.border-lg {
+  border-width: var(--border-width-lg);
+  border-style: solid;
+}
+
+/* =========================
+   Borders – Color
+   ========================= */
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-info {
+  border-color: var(--color-info);
+}
+
+.border-success {
+  border-color: var(--color-success);
+}
+
+.border-warning {
+  border-color: var(--color-warning);
+}
+
+.border-danger {
+  border-color: var(--color-danger);
+}
+
+.border-muted {
+  border-color: var(--color-gray-300);
+}
+
+.border-light {
+  border-color: var(--color-gray-200);
+}
+
+.border-dark {
+  border-color: var(--color-dark-600);
+}
+
+.border-none {
+  border: none;
+}
+
+/* =========================
+   Borders – Side
+   ========================= */
+
+.border-top {
+  border-top: 1px solid var(--color-border);
+}
+
+.border-right {
+  border-right: 1px solid var(--color-border);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.border-left {
+  border-left: 1px solid var(--color-border);
+}
+
+/* =========================
+   Borders – Radius
+   ========================= */
+
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-xs {
+  border-radius: var(--radius-xs);
+}
+
+.radius-sm {
+  border-radius: var(--radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg);
+}
+
+.radius-xl {
+  border-radius: var(--radius-xl);
+}
+
+.radius-full {
+  border-radius: var(--radius-full);
+}
+
+/* =========================
+   Borders – Style
+   ========================= */
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+/* =========================
+   Borders – State
+   ========================= */
+
+.border-focus {
+  border-color: var(--color-primary);
+}
+
+.border-error {
+  border-color: var(--color-danger);
+}
+
+.border-success {
+  border-color: var(--color-success);
+}
+
+.border-warning {
+  border-color: var(--color-warning);
+}
+
+/* =========================
+   Borders – Presets
+   ========================= */
+
+.border-card {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+}
+
+.border-input {
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+}
+
+/* =========================
+   Borders – Dividers
+   ========================= */
+
+.divider {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.divider-strong {
+  border-bottom: 2px solid var(--color-gray-300);
+}

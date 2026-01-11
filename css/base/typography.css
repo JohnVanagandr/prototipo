@@ -1,0 +1,90 @@
+/* =========================
+   TYPOGRAPHY - Sistema tipográfico
+   ========================= */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  color: var(----color-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(----color-secondary);
+}
+
+/* Jerarquía */
+h1 {
+  font-size: var(--font-size-2xl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+}
+
+/* Párrafos */
+p {
+  font-size: var(--font-size-md);
+  color: var(--gray-600);
+}
+
+/* Texto auxiliar */
+small {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+}
+
+/* Links */
+a {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Texto destacado */
+.text-muted {
+  color: var(--gray-600);
+}
+
+.text-bold {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Estados */
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-danger {
+  color: var(--color-danger);
+}

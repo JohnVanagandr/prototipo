@@ -1,0 +1,53 @@
+.settings-view {
+  padding-bottom: var(--space-md);
+  padding-top: var(--space-md);
+}
+
+.settings-content {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+
+.delete-by-category {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #f1c40f;
+}
+
+.delete-by-category label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.delete-controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.delete-controls select {
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.8rem;
+}
+
+
+@media (max-width: 480px) {
+  .settings-card {
+    padding: 1.2rem;
+  }
+
+  .delete-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .delete-controls button {
+    width: 100%;
+  }
+}

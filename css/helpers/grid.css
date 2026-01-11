@@ -1,0 +1,446 @@
+/* =========================
+   Grid – Base
+   ========================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+/* =========================
+   Grid – Columns
+   ========================= */
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-cols-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-cols-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-cols-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid-cols-11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.grid-cols-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+}
+
+/* =========================
+   Grid – Rows
+   ========================= */
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, auto);
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, auto);
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, auto);
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, auto);
+}
+
+/* =========================
+   Grid – Gap
+   ========================= */
+
+.grid-gap-xs {
+  gap: var(--space-xs);
+}
+
+.grid-gap-sm {
+  gap: var(--space-sm);
+}
+
+.grid-gap-md {
+  gap: var(--space-md);
+}
+
+.grid-gap-lg {
+  gap: var(--space-lg);
+}
+
+.grid-gap-xl {
+  gap: var(--space-xl);
+}
+
+/* =========================
+   Grid – Content Alignment
+   ========================= */
+
+.content-start {
+  align-content: start;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-end {
+  align-content: end;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+/* =========================
+   Grid – Items Alignment
+   ========================= */
+
+.items-start {
+  align-items: start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
+/* =========================
+   Grid – Item Alignment
+   ========================= */
+
+.self-start {
+  align-self: start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+/* =========================
+   Grid – Column Span
+   ========================= */
+
+.col-span-1 {
+  grid-column: span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5;
+}
+
+.col-span-6 {
+  grid-column: span 6;
+}
+
+.col-span-12 {
+  grid-column: span 12;
+}
+
+/* =========================
+   Grid – Placement
+   ========================= */
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-end-2 {
+  grid-column-end: 2;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
+.row-end-2 {
+  grid-row-end: 2;
+}
+
+/* Breakpoints estilo Tailwind (mobile-first) */
+@media (min-width: 640px) {
+
+  /* sm */
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sm\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .sm\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .sm\:col-span-1 {
+    grid-column: span 1;
+  }
+
+  .sm\:col-span-2 {
+    grid-column: span 2;
+  }
+
+  .sm\:col-span-3 {
+    grid-column: span 3;
+  }
+
+  .sm\:col-span-4 {
+    grid-column: span 4;
+  }
+
+  .sm\:col-span-6 {
+    grid-column: span 6;
+  }
+
+  .sm\:col-span-12 {
+    grid-column: span 12;
+  }
+
+  .sm\:grid-gap-sm {
+    gap: var(--space-sm);
+  }
+
+  .sm\:grid-gap-md {
+    gap: var(--space-md);
+  }
+
+  .sm\:grid-gap-lg {
+    gap: var(--space-lg);
+  }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3;
+  }
+
+  .md\:col-span-4 {
+    grid-column: span 4;
+  }
+
+  .md\:col-span-6 {
+    grid-column: span 6;
+  }
+
+  .md\:col-span-12 {
+    grid-column: span 12;
+  }
+
+  .md\:grid-gap-md {
+    gap: var(--space-md);
+  }
+
+  .md\:grid-gap-lg {
+    gap: var(--space-lg);
+  }
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3;
+  }
+
+  .lg\:col-span-4 {
+    grid-column: span 4;
+  }
+
+  .lg\:col-span-6 {
+    grid-column: span 6;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8;
+  }
+
+  .lg\:col-span-12 {
+    grid-column: span 12;
+  }
+
+  .lg\:grid-gap-lg {
+    gap: var(--space-lg);
+  }
+
+  .lg\:grid-gap-xl {
+    gap: var(--space-xl);
+  }
+}
+
+/* xl: 1280px */
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .xl\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .xl\:grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .xl\:col-span-3 {
+    grid-column: span 3;
+  }
+
+  .xl\:col-span-4 {
+    grid-column: span 4;
+  }
+
+  .xl\:col-span-6 {
+    grid-column: span 6;
+  }
+
+  .xl\:col-span-12 {
+    grid-column: span 12;
+  }
+}

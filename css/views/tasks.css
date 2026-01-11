@@ -1,0 +1,59 @@
+.tasks-view {
+  height: calc(100vh - var(--layout-toolbar-height));
+  padding: var(--space-md) var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  justify-content: start;
+  overflow: overlay;
+  scrollbar-width: none;
+}
+
+.tasks-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks-header h1 {
+  flex: 1;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.tasks-header p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+}
+
+.tasks-filters {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+.tasks-list {
+  display: grid;
+  gap: 16px;
+}
+
+.priority-high .task-priority {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority-medium .task-priority {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.priority-low .task-priority {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+@media (min-width: 768px) {
+  .tasks-filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

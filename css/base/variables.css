@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* =========================
+   Sistema de color semántico
+   ========================= */
+
+  --state-bg: transparent;
+
+  /* =========================
+   Blanco
+   ========================= */
+
+  --color-white-50: #FFFFFF;
+  --color-white-100: #FAFAFA;
+  --color-white-200: #F5F5F5;
+  --color-white-300: #EEEEEE;
+  --color-white-400: #E0E0E0;
+  --color-white-500: #D6D6D6;
+  --color-white-600: #BDBDBD;
+  --color-white-700: #9E9E9E;
+  --color-white-800: #757575;
+
+  /* =========================
+   Gris
+   ========================= */
+
+  --color-gray-50: #F9F9F9;
+  --color-gray-100: #F0F0F0;
+  --color-gray-200: #E0E0E0;
+  --color-gray-300: #CFCFCF;
+  --color-gray-400: #B0B0B0;
+  --color-gray-500: #999999;
+  --color-gray-600: #7A7A7A;
+  --color-gray-700: #5C5C5C;
+  --color-gray-800: #3D3D3D;
+
+
+  /* =========================
+   Amarillo
+   ========================= */
+
+  --color-yellow-50: #FFFBE6;
+  --color-yellow-100: #FFF3B0;
+  --color-yellow-200: #FDE97A;
+  --color-yellow-300: #F6E05E;
+  --color-yellow-400: #F2D94C;
+  --color-yellow-500: #F0DB4F;
+  --color-yellow-600: #D9C43F;
+  --color-yellow-700: #B8A532;
+  --color-yellow-800: #8F7F26;
+
+  /* =========================
+   Dark
+   ========================= */
+  --color-dark-50: #F4F4F3;
+  --color-dark-100: #DADBD8;
+  --color-dark-200: #BFC0BC;
+  --color-dark-300: #8E8F8B;
+  --color-dark-400: #5E5F5B;
+  --color-dark-500: #323330;
+  --color-dark-600: #2B2C29;
+  --color-dark-700: #242523;
+  --color-dark-800: #1C1D1A;
+
+  /* =========================
+   Rojo
+   ========================= */
+
+  --color-red-50: #FDECEA;
+  --color-red-100: #F9C5BF;
+  --color-red-200: #F39A90;
+  --color-red-300: #EE6F60;
+  --color-red-400: #EA5748;
+  --color-red-500: #E74C3C;
+  --color-red-600: #CF4436;
+  --color-red-700: #B23A2E;
+  --color-red-800: #8E2E25;
+
+  /* =========================
+   Verde
+   ========================= */
+
+  --color-green-50: #EAFBF2;
+  --color-green-100: #C9F2DC;
+  --color-green-200: #9FE8C1;
+  --color-green-300: #6FDE9F;
+  --color-green-400: #4ED485;
+  --color-green-500: #2ECC71;
+  --color-green-600: #27B862;
+  --color-green-700: #219C53;
+  --color-green-800: #1A7A42;
+
+  /* =========================
+   Naranja
+   ========================= */
+
+  --color-orange-50: #FFF3E0;
+  --color-orange-100: #FFE0B2;
+  --color-orange-200: #FFCC80;
+  --color-orange-300: #FFB74D;
+  --color-orange-400: #FFA726;
+  --color-orange-500: #F39C12;
+  --color-orange-600: #D68910;
+  --color-orange-700: #B9770E;
+  --color-orange-800: #935F0B;
+
+  /* =========================
+   Azul
+   ========================= */
+
+  --color-blue-50: #EBF5FB;
+  --color-blue-100: #D6EAF8;
+  --color-blue-200: #AED6F1;
+  --color-blue-300: #85C1E9;
+  --color-blue-400: #5DADE2;
+  --color-blue-500: #3498DB;
+  --color-blue-600: #2E86C1;
+  --color-blue-700: #2874A6;
+  --color-blue-800: #1F618D;
+
+  /* =========================
+   Aplicación
+   ========================= */
+
+  --color-primary-50: var(--color-yellow-50);
+  --color-primary-100: var(--color-yellow-100);
+  --color-primary-200: var(--color-yellow-200);
+  --color-primary-300: var(--color-yellow-300);
+  --color-primary-400: var(--color-yellow-400);
+  --color-primary-500: var(--color-yellow-500);
+  --color-primary-600: var(--color-yellow-600);
+  --color-primary-700: var(--color-yellow-700);
+  --color-primary-800: var(--color-yellow-800);
+
+  --color-secundary-50: var(--color-dark-50);
+  --color-secundary-100: var(--color-dark-100);
+  --color-secundary-200: var(--color-dark-200);
+  --color-secundary-300: var(--color-dark-300);
+  --color-secundary-400: var(--color-dark-400);
+  --color-secundary-500: var(--color-dark-500);
+  --color-secundary-600: var(--color-dark-600);
+  --color-secundary-700: var(--color-dark-700);
+  --color-secundary-800: var(--color-dark-800);
+
+  --color-danger-50: var(--color-red-50);
+  --color-danger-100: var(--color-red-100);
+  --color-danger-200: var(--color-red-200);
+  --color-danger-300: var(--color-red-300);
+  --color-danger-400: var(--color-red-400);
+  --color-danger-500: var(--color-red-500);
+  --color-danger-600: var(--color-red-600);
+  --color-danger-700: var(--color-red-700);
+  --color-danger-800: var(--color-red-800);
+
+  /*
+  ===========================================================
+  Deprecados
+  ============================================================
+  **/
+  --color-primary: var(--color-yellow-500);
+  --color-primary-hover: var(--color-yellow-600);
+  --color-primary-active: var(--color-yellow-700);
+  --color-primary-soft: var(--color-yellow-100);
+
+  /* Secundarios */
+  --color-secondary: var(--color-dark-500);
+  --color-secondary-hover: var(--color-dark-600);
+  --color-secondary-active: var(--color-dark-700);
+  --color-secondary-soft: var(--color-dark-100);
+
+  /*Blanco*/
+  --color-white: var(--color-white-50);
+  --color-white-muted: var(--color-white-100);
+  --color-white-soft: var(--color-white-200);
+  --color-white-light: var(--color-white-300);
+
+  /*Gris*/
+  --color-gray: var(--color-gray-500);
+  --color-gray-hover: var(--color-gray-600);
+  --color-gray-active: var(--color-gray-700);
+  --color-gray-soft: var(--color-gray-100);
+
+  /*dark*/
+  --color-dark: var(--color-dark-500);
+  --color-dark-hover: var(--color-dark-600);
+  --color-dark-active: var(--color-dark-700);
+  --color-dark-soft: var(--color-dark-100);
+
+  /* Danger*/
+  --color-danger: var(--color-red-500);
+  --color-danger-hover: var(--color-red-600);
+  --color-danger-active: var(--color-red-700);
+  --color-danger-soft: var(--color-red-100);
+
+  /* Success*/
+  --color-success: var(--color-green-500);
+  --color-success-hover: var(--color-green-600);
+  --color-success-active: var(--color-green-700);
+  --color-success-soft: var(--color-green-100);
+
+  /*Orange*/
+  --color-warning: var(--color-orange-500);
+  --color-warning-hover: var(--color-orange-600);
+  --color-warning-active: var(--color-orange-700);
+  --color-warning-soft: var(--color-orange-100);
+
+  /*Info*/
+  --color-info: var(--color-blue-500);
+  --color-info-hover: var(--color-blue-600);
+  --color-info-active: var(--color-blue-700);
+  --color-info-soft: var(--color-blue-100);
+
+  /* Superficies */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f5f5;
+
+  /* Texto */
+  --color-text-primary: #000000;
+  --color-text-secondary: #444444;
+  --color-text-muted: #666666;
+
+  /* Bordes */
+  --color-border: #dddddd;
+  --color-border-focus: var(--color-primary);
+
+  /* Fondo general */
+  --color-background: #f5f5f5;
+
+
+  /* =========================
+     Prioridades
+     ========================= */
+  --priority-low: var(--color-success);
+  --priority-medium: var(--color-warning);
+  --priority-high: var(--color-danger);
+
+  /* =========================
+   Sistema de bordes
+   ========================= */
+
+  /* Grosor */
+  --border-width-hairline: 1px;
+  --border-width-thin: 2px;
+
+  /* Radios */
+  --border-radius-xs: 6px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 999px;
+
+  /* Bordes base */
+  --border-color-default: var(--color-border);
+  --border-color-muted: var(--gray-200);
+  --border-color-strong: var(--gray-400);
+
+  /* Bordes interactivos */
+  --border-color-focus: var(--color-primary);
+  --border-color-hover: var(--gray-500);
+
+  /* Bordes de estado */
+  --border-color-success: var(--color-success);
+  --border-color-warning: var(--color-warning);
+  --border-color-danger: var(--color-danger);
+
+  /* Bordes semánticos */
+  --border-primary: var(--border-width-hairline) solid var(--color-primary);
+  --border-default: var(--border-width-hairline) solid var(--border-color-default);
+  --border-muted: var(--border-width-hairline) solid var(--border-color-muted);
+  --border-strong: var(--border-width-thin) solid var(--border-color-strong);
+
+  /* Bordes de estado */
+  --border-focus: var(--border-width-hairline) solid var(--border-color-focus);
+  --border-success: var(--border-width-hairline) solid var(--border-color-success);
+  --border-warning: var(--border-width-hairline) solid var(--border-color-warning);
+  --border-danger: var(--border-width-hairline) solid var(--border-color-danger);
+
+  /* =========================
+   Sistema de fuentes
+   ========================= */
+
+  /* Familias tipográficas */
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+
+  --font-family-heading: var(--font-family-base);
+  --font-family-ui: var(--font-family-base);
+  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono",
+    Menlo, Courier, monospace;
+
+  /* Pesos tipográficos */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Tamaños base */
+  --font-size-xs: 0.65rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 0.85rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.2rem;
+  --font-size-2xl: 1.4rem;
+
+  /* Altura de línea */
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-loose: 1.7;
+
+  /* Espaciado de letras */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.04em;
+
+  /* =========================
+   Sistema de sombras
+   ========================= */
+
+  /* Elevación base */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.18);
+
+  /* Interacción */
+  --shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.14);
+  --shadow-active: 0 2px 4px rgba(0, 0, 0, 0.18);
+
+  /* Superposición */
+  --shadow-overlay: 0 16px 48px rgba(0, 0, 0, 0.25);
+
+  --overlay: rgba(0, 0, 0, 0.8);
+  /* =========================
+   Sistema de espaciados
+   ========================= */
+
+  /* Escala base */
+  --space-3xs: 0.125rem;
+  /* 2px */
+  --space-2xs: 0.25rem;
+  /* 4px */
+  --space-xs: 0.5rem;
+  /* 8px */
+  --space-sm: 0.75rem;
+  /* 12px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 3rem;
+  /* 48px */
+  --space-3xl: 4rem;
+  /* 64px */
+
+  /* =========================
+     Transiciones
+     ========================= */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* =========================
+     Z-index
+     ========================= */
+  --z-fab: 800;
+  --z-overlay: 900;
+  --z-sidebar: 1000;
+  --z-header: 1100;
+  --z-modal: 1200;
+  --z-toast: 1300;
+
+  /* =========================
+     Breakpoints (referencia)
+     ========================= */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* =========================
+   Sistema de Layout
+   ========================= */
+
+  /* Contenedores */
+  --layout-max-width: 1200px;
+  --layout-max-width-wide: 1440px;
+  --layout-min-width: 320px;
+
+  /* Padding horizontal global */
+  --layout-padding-inline: var(--space-4);
+  --layout-padding-inline-lg: var(--space-6);
+
+  /* Altos principales */
+  --layout-header-height: 64px;
+  --layout-footer-height: 56px;
+  --layout-toolbar-height: 48px;
+
+  /* Altos mínimos */
+  --layout-content-min-height: calc(100vh - var(--layout-header-height));
+
+  /* Sidebar */
+  --layout-sidebar-width: 280px;
+  --layout-sidebar-width-collapsed: 80px;
+  --layout-sidebar-min-width: 64px;
+
+  /* Sidebar móvil */
+  --layout-sidebar-mobile-width: 100vw;
+
+  /* Sidebar offset (cuando está fija) */
+  --layout-sidebar-offset: var(--layout-sidebar-width);
+
+  /* Content area */
+  --layout-content-max-width: calc(var(--layout-max-width) - var(--layout-sidebar-width));
+
+  --layout-content-padding: var(--space-6);
+  --layout-content-padding-sm: var(--space-4);
+
+}

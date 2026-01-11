@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+  <header class="topbar">
+    <button id="menuToggle" class="menu-btn">
+      <i class='bx bx-menu'></i>
+    </button>
+    <h1 class="app-title">TaskApp</h1>
+    <div class="user-avatar">JB</div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Overlay: cubre la aplicación -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Floating Action Button -->
+    <a href="task.html" class="fab" aria-label="Crear nueva tarea">
+      <i class='bx bx-plus'></i>
+    </a>
+    <!-- Sidebar (drawer) -->
+    <aside id="sidebar" class="sidebar">
+      <header class="sidebar__header">
+        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
+          <i class='bx bx-x'></i>
+        </button>
+        <span>TaskApp</span>
+      </header>
+      <div class="sidebar__content">
+        <div class="user-card">
+          <div class="user-card__header">
+            <div class="user-avatar-lg">JB</div>
+          </div>
+          <div class="user-card__body">
+            <p class="user-name">John Becerra</p>
+            <p class="user-email">john.becerra@gmail.com</p>
+          </div>
+    
+          <a href="#/profile" class="view-profile-btn" data-route="profile">
+            Editar
+          </a>
+        </div>
+    
+        <nav class="nav-menu">
+          <a href="#/home" class="nav-item active" data-route="home">
+            <i class='nav-icon bx bxs-home'></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+          <a href="#/pending" class="nav-item" data-route="pending">
+            <i class='nav-icon bx bx-task-x'></i>
+            <span class="nav-text">Pendientes</span>
+          </a>
+    
+          <a href="#/completed" class="nav-item" data-route="completed">
+            <i class='nav-icon bx bx-task'></i>
+            <span class="nav-text">Finalizadas</span>
+          </a>
+    
+          <a href="#/tasks" class="nav-item" data-route="tasks">
+            <i class='nav-icon bx bx-list-ol'></i>
+            <span class="nav-text">Todas</span>
+          </a>
+          <a href="#/statistics" class="nav-item" data-route="statistics">
+            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
+            <span class="nav-text">Estadisticas</span>
+          </a>
+          <a href="#/seting" class="nav-item" data-route="seting">
+            <i class='nav-icon bx bxs-cog'></i>
+            <span class="nav-text">Configuración</span>
+          </a>
+        </nav>
+    
+    
+        <div class="logout">
+          <a href="#/login" class="button" id="logoutBtn" data-route="login">
+            <i class='bx bxs-lock-alt'></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+    
+      </div>
+    </aside>
+    <!-- Contenido principal -->
+    <main id="appContent" class="content">
+      <!-- Vistas dinámicas -->
+
+
+      <section class="stats-view">
+      
+        <header class="stats-header">
+          <h1>Estadísticas</h1>
+          <p>Resumen del uso y estado de tus tareas</p>
+        </header>
+      
+        <div class="flex flex-column gap-md">
+          <!-- Resumen -->
+          <section class="grid grid-cols-2 md:grid-cols-3">
+
+            <article class="stat-card stat-card--sussess">
+              <span class="stat-card__value">24</span>
+              <span class="stat-card__label">Completadas</span>
+            </article>
+
+            <article class="stat-card stat-card--danger">
+              <span class="stat-card__value">8</span>
+              <span class="stat-card__label">Pendientes</span>
+            </article>
+
+            <article class="stat-card stat-card--warning">
+              <span class="stat-card__value">3</span>
+              <span class="stat-card__label">Vencidas</span>
+            </article>
+
+          </section>
+          <!-- Detalles -->
+          <section class="grid grid-cols-1">
+
+            <article class="list-card">
+              <h2 class="list-card__title">Tareas por prioridad</h2>
+            
+              <ul class="list-card__items">
+                <li class="list-card__item">
+                  <span>Alta</span>
+                  <span>6</span>
+                </li>
+                <li class="list-card__item">
+                  <span>Media</span>
+                  <span>12</span>
+                </li>
+                <li class="list-card__item">
+                  <span>Baja</span>
+                  <span>8</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="list-card">
+              <h2 class="list-card__title">Tareas por categoría</h2>
+
+              <ul class="list-card__items">
+                <li class="list-card__item">
+                  <span>Trabajo</span>
+                  <span>10</span>
+                </li>
+                <li class="list-card__item">
+                  <span>Estudio</span>
+                  <span>7</span>
+                </li>
+                <li class="list-card__item">
+                  <span>Personal</span>
+                  <span>5</span>
+                </li>
+              </ul>
+            </article>
+
+          </section>
+        </div>
+      
+      </section>
+
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.profile-view {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.profile-header {
+  margin-bottom: 1.2rem;
+}
+
+.profile-content {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 1.2rem;
+  }
+}

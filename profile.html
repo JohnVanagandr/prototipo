@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+  <header class="topbar">
+    <button id="menuToggle" class="menu-btn">
+      <i class='bx bx-menu'></i>
+    </button>
+    <h1 class="app-title">TaskApp</h1>
+    <div class="user-avatar">JB</div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Overlay: cubre la aplicación -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Sidebar (drawer) -->
+    <aside id="sidebar" class="sidebar">
+      <header class="sidebar__header">
+        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
+          <i class='bx bx-x'></i>
+        </button>
+        <span>TaskApp</span>
+      </header>
+      <div class="sidebar__content">
+        <div class="user-card">
+          <div class="user-card__header">
+            <div class="user-avatar-lg">JB</div>
+          </div>
+          <div class="user-card__body">
+            <p class="user-name">John Becerra</p>
+            <p class="user-email">john.becerra@gmail.com</p>
+          </div>
+    
+          <a href="#/profile" class="view-profile-btn" data-route="profile">
+            Editar
+          </a>
+        </div>
+    
+        <nav class="nav-menu">
+          <a href="#/home" class="nav-item active" data-route="home">
+            <i class='nav-icon bx bxs-home'></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+          <a href="#/pending" class="nav-item" data-route="pending">
+            <i class='nav-icon bx bx-task-x'></i>
+            <span class="nav-text">Pendientes</span>
+          </a>
+    
+          <a href="#/completed" class="nav-item" data-route="completed">
+            <i class='nav-icon bx bx-task'></i>
+            <span class="nav-text">Finalizadas</span>
+          </a>
+    
+          <a href="#/tasks" class="nav-item" data-route="tasks">
+            <i class='nav-icon bx bx-list-ol'></i>
+            <span class="nav-text">Todas</span>
+          </a>
+          <a href="#/statistics" class="nav-item" data-route="statistics">
+            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
+            <span class="nav-text">Estadisticas</span>
+          </a>
+          <a href="#/seting" class="nav-item" data-route="seting">
+            <i class='nav-icon bx bxs-cog'></i>
+            <span class="nav-text">Configuración</span>
+          </a>
+        </nav>
+    
+    
+        <div class="logout">
+          <a href="#/login" class="button" id="logoutBtn" data-route="login">
+            <i class='bx bxs-lock-alt'></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+    
+      </div>
+    </aside>
+    <!-- Contenido principal -->
+    <main id="appContent" class="content">
+      <!-- Vistas dinámicas -->
+
+      <section class="profile-view">
+
+        <header class="profile-header">
+          <h1>Perfil de usuario</h1>
+          <p>Administra tu información personal y tus datos de acceso</p>
+        </header>
+
+        <div class="profile-content">
+
+          <!-- Datos personales -->
+          <section class="card">
+            <header class="card--header">
+              <h2 class="card__title">Datos personales</h2>
+            </header>
+            <div class="card__body">
+              <form class="form">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" value="Juan Pérez" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" value="juan@email.com" />
+                </div>
+                <button class="btn btn--primary">Guardar cambios</button>
+              </form>
+            </div>
+          </section>
+
+
+          <!-- Datos de acceso -->
+          <section class="card">
+
+            <header class="card__header">
+              <h2 class="card__title">Datos de acceso</h2>
+            </header>
+
+            <form class="form">
+
+              <div class="form-group">
+                <label for="password">Nueva contraseña</label>
+                <input type="password" id="password" />
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" />
+              </div>
+
+              <button class="btn btn--primary">Actualizar contraseña</button>
+
+            </form>
+
+          </section>
+
+
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

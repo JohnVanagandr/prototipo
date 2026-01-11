@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <button id="menuToggle" class="menu-btn">
+      <i class='bx bx-menu'></i>
+    </button>
+    <h1 class="app-title">TaskApp</h1>
+    <div class="user-avatar">JB</div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Overlay: cubre la aplicación -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Sidebar (drawer) -->
+    <aside id="sidebar" class="sidebar">
+      <header class="sidebar__header">
+        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
+          <i class='bx bx-x'></i>
+        </button>
+        <span>TaskApp</span>
+      </header>
+      <div class="sidebar__content">
+        <div class="user-card">
+          <div class="user-card__header">
+            <div class="user-avatar-lg">JB</div>
+          </div>
+          <div class="user-card__body">
+            <p class="user-name">John Becerra</p>
+            <p class="user-email">john.becerra@gmail.com</p>
+          </div>
+    
+          <a href="#/profile" class="view-profile-btn" data-route="profile">
+            Editar
+          </a>
+        </div>
+    
+        <nav class="nav-menu">
+          <a href="#/home" class="nav-item active" data-route="home">
+            <i class='nav-icon bx bxs-home'></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+          <a href="#/pending" class="nav-item" data-route="pending">
+            <i class='nav-icon bx bx-task-x'></i>
+            <span class="nav-text">Pendientes</span>
+          </a>
+    
+          <a href="#/completed" class="nav-item" data-route="completed">
+            <i class='nav-icon bx bx-task'></i>
+            <span class="nav-text">Finalizadas</span>
+          </a>
+    
+          <a href="#/tasks" class="nav-item" data-route="tasks">
+            <i class='nav-icon bx bx-list-ol'></i>
+            <span class="nav-text">Todas</span>
+          </a>
+          <a href="#/statistics" class="nav-item" data-route="statistics">
+            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
+            <span class="nav-text">Estadisticas</span>
+          </a>
+          <a href="#/seting" class="nav-item" data-route="seting">
+            <i class='nav-icon bx bxs-cog'></i>
+            <span class="nav-text">Configuración</span>
+          </a>
+        </nav>
+    
+    
+        <div class="logout">
+          <a href="#/login" class="button" id="logoutBtn" data-route="login">
+            <i class='bx bxs-lock-alt'></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+    
+      </div>
+    </aside>
+<!-- Floating Action Button -->
+    <a href="task.html" class="fab" aria-label="Crear nueva tarea">
+      <i class='bx bx-plus'></i>
+    </a>
+    <!-- Contenido principal -->
+    <main id="appContent" class="content">
+
+      <section class="tasks-view">
+
+        <!-- Header -->
+        <header class="tasks-header">
+          <div class="tasks-header-top">
+            <h1>Tareas pendientes</h1>
+            <span class="badge badge--dark tasks-counter">12</span>
+          </div>
+          <p>Organiza y prioriza tu trabajo</p>
+        </header>
+
+        <!-- Filtros -->
+        <section class="tasks-filters">
+          <div class="form-group">
+            <select id="categoria">
+              <option value="">Todas las categorías</option>
+              <option value="trabajo">Trabajo</option>
+              <option value="estudio">Estudio</option>
+              <option value="diseno">Diseño</option>
+              <option value="personal">Personal</option>
+              <option value="organizacion">Organización</option>
+              <option value="mantenimiento">Mantenimiento</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="prioridad">
+              <option value="">Todas las prioridades</option>
+              <option value="high">Alta</option>
+              <option value="medium">Media</option>
+              <option value="low">Baja</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Listado de tareas -->
+        <section class="grid grid-cols-1 md:grid-cols-2 tasks-list">
+
+          <!-- 1 -->
+          <article class="card priority-high">
+            <header class="card__header">
+              <h3 class="card__title">Preparar presentación del sprint</h3>
+              <span class="task-priority badge">Alta</span>
+            </header>
+            <div class="card__body">
+              <p class="card__text">
+                Organizar diapositivas y puntos clave para la reunión del equipo Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe hic sint voluptatibus tempora ipsa corrupti neque, quos beatae officiis.
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__meta">
+                <span class="task-category">Trabajo</span>
+                <span class="task-date">Hoy</span>
+              </div>
+              <div class="card__action">
+                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                <button class="btn btn--sm btn--primary" >Completada</button>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 2 -->
+          <article class="card priority-high">
+            <header class="card__header">
+              <h3 class="card__title">Corregir errores de la vista de tareas</h3>
+              <span class="task-priority badge">Alta</span>
+            </header>
+            <div class="card__body">
+              <p class="card__text">
+                Ajustar filtros y estilos en la vista de tareas pendientes.
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__meta">
+                <span class="task-category">Trabajo</span>
+                <span class="task-date">Esta semana</span>
+              </div>
+              <div class="card__action">
+                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                <a class="btn btn--sm btn--primary">Completada</a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 3 -->
+          <article class="card priority-medium">
+            <header class="card__header">
+              <h3 class="card__title">Estudiar promesas en JavaScript</h3>
+              <span class="task-priority badge">Media</span>
+            </header>
+            <div class="card__body">
+              <p class="card__text">
+                Repasar encadenamiento y manejo de errores.
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__meta">
+                <span class="task-category">Estudio</span>
+                <span class="task-date">Esta semana</span>
+              </div>
+              <div class="card__action">
+                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                <a class="btn btn--sm btn--primary">Completada</a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 4 -->
+          <article class="card priority-medium">
+            <header class="card__header">
+              <h3 class="card__title">Diseñar cards reutilizables en CSS</h3>
+              <span class="task-priority badge">Media</span>
+            </header>
+            <div class="card__body">
+              <p class="card__text">
+                Crear componentes visuales para tareas y estados.
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__meta">
+                <span class="task-category">Diseño</span>
+                <span class="task-date">Próximos días</span>
+              </div>
+              <div class="card__action">
+                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                <a class="btn btn--sm btn--primary">Completada</a>
+              </div>
+            </footer>
+          </article>
+
+          <!-- 5 -->
+          <article class="card priority-low">
+            <header class="card__header">
+              <h3 class="card__title">Comprar víveres de la semana</h3>
+              <span class="task-priority badge">Baja</span>
+            </header>
+            <div class="card__body">
+              <p class="card__text">
+                Frutas, verduras y productos básicos.
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__meta">
+                <span class="task-category">Personal</span>
+                <span class="task-date">Hoy</span>
+              </div>
+              <div class="card__action">
+                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                <a class="btn btn--sm btn--primary">Completada</a>
+              </div>
+            </footer>
+          </article>
+        </section>
+
+      </section>
+
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

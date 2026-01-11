@@ -1,0 +1,32 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100vh - var(--layout-toolbar-height));
+  overflow: overlay;
+  scrollbar-width: none;
+}
+
+.content {
+  padding: 0px 12px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 550px;
+}
+
+.section-md {
+  padding-bottom: var(--space-md);
+  padding-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0 24px;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: 1100px;
+  }
+}

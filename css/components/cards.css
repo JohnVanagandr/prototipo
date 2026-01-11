@@ -1,0 +1,158 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  border: var(--border-default);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card__body {
+  padding: var(--space-3xs);
+}
+
+.card__text {
+  font-size: var(--font-size-md);
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.card__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: var(--space-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.card__action {
+  margin-top: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: var(--border-default);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.card--info {
+  background-color: var(--color-info);
+}
+
+.card--warning {
+  background-color: var(--color-warning);
+}
+
+.card--success {
+  background-color: var(--color-success);
+}
+
+.card--danger {
+  background-color: var(--color-danger);
+}
+
+/**
+=================================
+  Cards statistics
+=================================
+*/
+
+.stat-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.stat-card__value {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.stat-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.stat-card--sussess {
+  background-color: var(--color-green-200);
+  color: var(--color-green-800);
+}
+
+.stat-card--warning {
+  background-color: var(--color-orange-200);
+  color: var(--color-orange-800);
+}
+
+.stat-card--danger {
+  background-color: var(--color-red-200);
+  color: var(--color-red-800);
+}
+
+/**
+=================================
+  Cards lists
+=================================
+*/
+
+.list-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-default);
+}
+
+.list-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-md);
+}
+
+.list-card__description {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.list-card__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: var(--space-xs);
+}
+
+.list-card__item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+  font-size: var(--font-size-md);
+  border-bottom: 1px solid #eee;
+}
+
+.list-card__items li:last-child {
+  border-bottom: none;
+}

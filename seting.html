@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+  <header class="topbar">
+    <button id="menuToggle" class="menu-btn">
+      <i class='bx bx-menu'></i>
+    </button>
+    <h1 class="app-title">TaskApp</h1>
+    <div class="user-avatar">JB</div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Overlay: cubre la aplicación -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Floating Action Button -->
+    <a href="task.html" class="fab" aria-label="Crear nueva tarea">
+      <i class='bx bx-plus'></i>
+    </a>
+    <!-- Sidebar (drawer) -->
+    <aside id="sidebar" class="sidebar">
+      <header class="sidebar__header">
+        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
+          <i class='bx bx-x'></i>
+        </button>
+        <span>TaskApp</span>
+      </header>
+      <div class="sidebar__content">
+        <div class="user-card">
+          <div class="user-card__header">
+            <div class="user-avatar-lg">JB</div>
+          </div>
+          <div class="user-card__body">
+            <p class="user-name">John Becerra</p>
+            <p class="user-email">john.becerra@gmail.com</p>
+          </div>
+    
+          <a href="#/profile" class="view-profile-btn" data-route="profile">
+            Editar
+          </a>
+        </div>
+    
+        <nav class="nav-menu">
+          <a href="#/home" class="nav-item active" data-route="home">
+            <i class='nav-icon bx bxs-home'></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+          <a href="#/pending" class="nav-item" data-route="pending">
+            <i class='nav-icon bx bx-task-x'></i>
+            <span class="nav-text">Pendientes</span>
+          </a>
+    
+          <a href="#/completed" class="nav-item" data-route="completed">
+            <i class='nav-icon bx bx-task'></i>
+            <span class="nav-text">Finalizadas</span>
+          </a>
+    
+          <a href="#/tasks" class="nav-item" data-route="tasks">
+            <i class='nav-icon bx bx-list-ol'></i>
+            <span class="nav-text">Todas</span>
+          </a>
+          <a href="#/statistics" class="nav-item" data-route="statistics">
+            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
+            <span class="nav-text">Estadisticas</span>
+          </a>
+          <a href="#/seting" class="nav-item" data-route="seting">
+            <i class='nav-icon bx bxs-cog'></i>
+            <span class="nav-text">Configuración</span>
+          </a>
+        </nav>
+    
+    
+        <div class="logout">
+          <a href="#/login" class="button" id="logoutBtn" data-route="login">
+            <i class='bx bxs-lock-alt'></i>
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+    
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main id="appContent" class="content">
+      <!-- Vistas dinámicas -->
+    <section class="section-md">
+
+        <header class="settings-header">
+          <h1>Configuración</h1>
+          <p>Administra las preferencias y acciones del sistema</p>
+        </header>
+
+      <div class="settings-content">
+
+      <!-- Preferencias -->
+      <section class="list-card">
+        <h2 class="list-card__title">Categorías visibles</h2>
+        <p class="list-card__description">
+          Selecciona las categorías que deseas ver en la aplicación.
+        </p>
+        <ul class="list-card__items">
+          <li class="list-card__item">
+            <label for="trabajo">Trabajo</label>
+            <input id="trabajo" type="checkbox" checked />
+          </li>
+          <li class="list-card__item">
+            <label for="estudio">Estudio</label>
+            <input id="estudio" type="checkbox" checked />
+          </li>
+          <li class="list-card__item">
+            <label for="personal">Personal</label>
+            <input id="personal" type="checkbox" />
+          </li>
+        </ul>
+
+      </section>
+
+    <!-- Gestión de tareas -->
+      <section class="card">
+        <header class="card__header">
+          <h2 class="card__title">Gestión de tareas</h2>
+        </header>
+        <div class="card__body">
+          <p class="card__text">
+            Estas acciones eliminarán información de forma permanente.
+          </p>
+          <div class="delete-by-category">
+              <label for="delete-category">
+                Eliminar tareas por categoría
+              </label>
+              <div class="delete-controls">
+                  <select id="delete-category">
+                    <option value="">Seleccione una categoría</option>
+                    <option value="trabajo">Trabajo</option>
+                    <option value="estudio">Estudio</option>
+                    <option value="personal">Personal</option>
+                  </select>
+                <button class="btn btn--primary">
+                  Eliminar tareas
+                </button>
+              </div>
+          </div>
+        </div>
+        <footer class="card__footer">
+          <small class="card__meta">
+            Solo se eliminarán las tareas de la categoría seleccionada.
+          </small>
+        </footer>
+      </section>
+
+      <!-- Zona crítica -->
+      <section class="card">
+        <header class="card__header">
+          <h2 class="card__title">Eliminar cuenta</h2>
+        </header>
+        <div class="card__body">
+          <p class="card__text">
+            Esta acción eliminará tu cuenta y todos los datos asociados de forma permanente.
+          </p>
+        </div>
+        <footer class="card__footer">
+          <button class="btn btn--danger">
+            Eliminar mi cuenta
+          </button>
+        </footer>
+      </section>
+
+
+  </div>
+
+</section>
+
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

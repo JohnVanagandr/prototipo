@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  
+
+  <header class="topbar">
+    <button id="menuToggle" class="menu-btn" aria-label="Abrir menú">
+      <i class='bx bx-menu'></i>
+      <!-- <i class='bx bx-menu'></i> -->
+      <!-- <i class='bx bx-arrow-back'></i> -->
+    </button>
+    <h1 class="app-title">TaskApp</h1>
+    <div class="user-avatar">JB</div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Overlay: cubre la aplicación -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Floating Action Button -->
+    <a href="task.html" class="fab" aria-label="Crear nueva tarea">
+      <i class='bx bx-plus'></i>
+    </a>
+    <!-- Sidebar (drawer) -->
+    <aside id="sidebar" class="sidebar">
+      <header class="sidebar__header">
+        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
+          <i class='bx bx-x'></i>
+        </button>
+        <span>TaskApp</span>
+      </header>
+      <div class="sidebar__content">
+      <div class="user-card">
+        <div class="user-card__header">
+          <div class="user-avatar-lg">JB</div>
+        </div>      
+        <div class="user-card__body">
+          <p class="user-name">John Becerra</p>
+          <p class="user-email">john.becerra@gmail.com</p>
+        </div>
+      
+        <a href="#/profile" class="view-profile-btn" data-route="profile">
+          Editar
+        </a>
+      </div>
+
+        <nav class="nav-menu">
+          <a href="#/home" class="nav-item active" data-route="home">
+            <i class='nav-icon bx bxs-home'></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+          <a href="#/pending" class="nav-item" data-route="pending">
+            <i class='nav-icon bx bx-task-x'></i>
+            <span class="nav-text">Pendientes</span>
+          </a>
+
+          <a href="#/completed" class="nav-item" data-route="completed">
+            <i class='nav-icon bx bx-task'></i>
+            <span class="nav-text">Finalizadas</span>
+          </a>
+
+          <a href="#/tasks" class="nav-item" data-route="tasks">
+            <i class='nav-icon bx bx-list-ol'></i>
+            <span class="nav-text">Todas</span>
+          </a>
+          <a href="#/statistics" class="nav-item" data-route="statistics">
+            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
+            <span class="nav-text">Estadisticas</span>
+          </a>
+          <a href="#/seting" class="nav-item" data-route="seting">
+            <i class='nav-icon bx bxs-cog'></i>
+            <span class="nav-text">Configuración</span>
+          </a>
+        </nav>
+
+
+      <div class="logout">
+        <a href="#/login" class="button" id="logoutBtn" data-route="login">
+          <i class='bx bxs-lock-alt'></i>
+          <span>Cerrar sesión</span>
+        </a>
+      </div>
+
+      </div>
+    </aside>
+    <!-- Contenido principal -->
+    <main id="appContent" class="content">
+      <!-- Vistas dinámicas -->
+
+      <section class="section-md home">
+      
+        <!-- Bloque 1: Saludo -->
+        <header class="home-greeting">
+          <h2>Hola, John Becerra</h2>
+          <p>Tienes <strong>tareas pendientes</strong> para hoy</p>
+        </header>
+      
+        <div class="grid grid-rows-2 grid-gap-lg">
+
+          <!-- Bloque 2: Resumen -->
+          <section class="grid grid-cols-3 grid-gap-md ">
+            <div class="stat-card stat-card--warning">
+              <span class="stat-card__value">5</span>
+              <span class="stat-card__label">Pendientes</span>
+            </div>
+        
+            <div class="stat-card stat-card--sussess">
+              <span class="stat-card__value">2</span>
+              <span class="stat-card__label">Completadas</span>
+            </div>
+
+            <div class="stat-card stat-card--danger">
+              <span class="stat-card__value">3</span>
+              <span class="stat-card__label">Vencidas</span>
+            </div>
+          </section>
+        
+          <!-- Bloque 3: Tareas destacadas -->
+          <section class="flex flex-column gap-md">
+            <header class="flex flex-column gap-xs">
+              <h3>Tareas destacadas</h3>
+              <p>Tareas que pueden ser muy importante atender</p>
+            </header>
+            <div class="grid grid-cols-1 gap-sm md:grid-cols-2">
+              <a href="detail.html" class="home-task-item"> 
+                <i class='bx bxs-pin'></i>
+                <span>Preparar clase de JavaScript </span>
+              </a>
+              <a href="detail.html" class="home-task-item">
+                <i class='bx bxs-pin'></i>
+                <span>Preparar clase de CSS</span>
+              </a>
+              <a href="detail.html" class="home-task-item">
+                <i class='bx bxs-pin'></i>
+                <span>Preparar clase de HTML</span>
+              </a>
+              <a href="detail.html" class="home-task-item">
+                <i class='bx bxs-pin'></i>
+                <span>Preparar clase de GIT</span>
+              </a>
+              <a href="detail.html" class="home-task-item">
+                <i class='bx bxs-pin'></i> 
+                <span>Preparar clase de SQL</span>
+              </a>
+              <a href="detail.html" class="home-task-item">
+                <i class='bx bxs-pin'></i> 
+                <span>Revisar entregables</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- Bloque 4: categorias activas -->
+          <section class="flex flex-column gap-md">
+            <header class="flex flex-column gap-xs">
+              <h3 class="">Categorías activas</h3>
+              <p class="">
+                Tareas pendientes por categoría
+              </p>
+            </header>
+          
+            <div class="categories__grid">
+              <article class="category-card" data-category="trabajo">
+                <span class="category-card__count">5</span>
+                <h3 class="category-card__name">Trabajo</h3>
+              </article>
+          
+              <article class="category-card" data-category="estudio">
+                <span class="category-card__count">3</span>
+                <h3 class="category-card__name">Estudio</h3>
+              </article>
+          
+              <article class="category-card" data-category="personal">
+                <span class="category-card__count">2</span>
+                <h3 class="category-card__name">Personal</h3>
+              </article>
+          
+              <article class="category-card" data-category="salud">
+                <span class="category-card__count">1</span>
+                <h3 class="category-card__name">Salud</h3>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

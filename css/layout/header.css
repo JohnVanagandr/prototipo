@@ -1,0 +1,36 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--layout-toolbar-height);
+  padding: 0 1rem;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-bottom: var(--border-default);
+}
+
+.menu-btn {
+  font-size: var(--font-size-2xl);
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.app-title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+}
+
+.user-avatar {
+  background-color: var(--gray-50);
+  color: var(--color-secondary);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}

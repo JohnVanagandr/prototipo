@@ -1,0 +1,14 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+  z-index: var(--z-overlay);
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
