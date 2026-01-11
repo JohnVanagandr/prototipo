@@ -13,82 +13,18 @@
 
 
   <header class="topbar">
-    <button id="menuToggle" class="menu-btn">
-      <i class='bx bx-menu'></i>
+    <button id="menuToggle" class="menu-btn" data-route="home">
+      <i class='bx bx-arrow-back'></i>
     </button>
     <h1 class="app-title">TaskApp</h1>
     <div class="user-avatar">JB</div>
   </header>
 
   <div class="app-layout">
-    <!-- Overlay: cubre la aplicación -->
-    <div id="overlay" class="overlay"></div>
     <!-- Floating Action Button -->
     <a href="task.html" class="fab" aria-label="Crear nueva tarea">
       <i class='bx bx-plus'></i>
     </a>
-    <!-- Sidebar (drawer) -->
-    <aside id="sidebar" class="sidebar">
-      <header class="sidebar__header">
-        <button class="menu-close-btn" id="menu-close-btn" aria-label="Cerrar menú">
-          <i class='bx bx-x'></i>
-        </button>
-        <span>TaskApp</span>
-      </header>
-      <div class="sidebar__content">
-        <div class="user-card">
-          <div class="user-card__header">
-            <div class="user-avatar-lg">JB</div>
-          </div>
-          <div class="user-card__body">
-            <p class="user-name">John Becerra</p>
-            <p class="user-email">john.becerra@gmail.com</p>
-          </div>
-    
-          <a href="#/profile" class="view-profile-btn" data-route="profile">
-            Editar
-          </a>
-        </div>
-    
-        <nav class="nav-menu">
-          <a href="#/home" class="nav-item active" data-route="home">
-            <i class='nav-icon bx bxs-home'></i>
-            <span class="nav-text">Inicio</span>
-          </a>
-          <a href="#/pending" class="nav-item" data-route="pending">
-            <i class='nav-icon bx bx-task-x'></i>
-            <span class="nav-text">Pendientes</span>
-          </a>
-    
-          <a href="#/completed" class="nav-item" data-route="completed">
-            <i class='nav-icon bx bx-task'></i>
-            <span class="nav-text">Finalizadas</span>
-          </a>
-    
-          <a href="#/tasks" class="nav-item" data-route="tasks">
-            <i class='nav-icon bx bx-list-ol'></i>
-            <span class="nav-text">Todas</span>
-          </a>
-          <a href="#/statistics" class="nav-item" data-route="statistics">
-            <i class='nav-icon bx bxs-bar-chart-alt-2'></i>
-            <span class="nav-text">Estadisticas</span>
-          </a>
-          <a href="#/seting" class="nav-item" data-route="seting">
-            <i class='nav-icon bx bxs-cog'></i>
-            <span class="nav-text">Configuración</span>
-          </a>
-        </nav>
-    
-    
-        <div class="logout">
-          <a href="#/login" class="button" id="logoutBtn" data-route="login">
-            <i class='bx bxs-lock-alt'></i>
-            <span>Cerrar sesión</span>
-          </a>
-        </div>
-    
-      </div>
-    </aside>
 
     <!-- Contenido principal -->
     <main id="appContent" class="content">
