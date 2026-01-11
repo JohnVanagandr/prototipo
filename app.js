@@ -17,7 +17,10 @@ let path = window.location.pathname;
  * Convertimos la cadena en un arreglo siempre y cuando tenga un (.)
  * Tomamos el primer elemento del arreglo
  */
-menuState.path = path.slice(1).split(".")[0];
+// Para trabajar en local
+// menuState.path = path.slice(1).split(".")[0];
+// Para trabajar en Github | Pendiente de pasar al bundle
+menuState.path = path.slice(1).split(".")[0].split("/")[1];
 
 const toggleMenu = () => {
   sidebar.classList.toggle("open");
