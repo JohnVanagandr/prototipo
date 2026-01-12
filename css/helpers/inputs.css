@@ -160,8 +160,3 @@
 .form-group {
   margin-bottom: var(--space-lg);
 }
-
-.form-row {
-  display: flex;
-  gap: var(--space-md);
-}

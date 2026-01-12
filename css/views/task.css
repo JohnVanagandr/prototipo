@@ -14,16 +14,3 @@
   font-size: 0.8rem;
   color: #666;
 }
-
-
-@media (max-width: 480px) {
-  .new-task-header {
-    padding: 1.2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
