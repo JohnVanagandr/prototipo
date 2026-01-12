@@ -9,21 +9,33 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr) 60px;
   gap: var(--space-xs);
-  align-items: center;
+  align-items: end;
 }
 
 .task-filters__advanced {
   display: none;
   margin-top: var(--space-md);
   gap: var(--space-md);
+  align-items: end;
 }
 
 .task-filters__advanced.open {
   display: grid;
 }
 
-.filter {
-  min-width: 100px;
+.data-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data-filter label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2xs);
+  color: var(--color-secondary);
+  text-align: left;
+  padding-left: var(--space-2xs);
 }
 
 .filter {

@@ -39,36 +39,50 @@
           <p>Organiza y prioriza tu trabajo</p>
         </header>
 
+          <!-- Filtros -->
           <section class="task-filters">
             <!-- Filtros principales -->
             <div class="task-filters__main">
-              <select class="filter" id="categoria">
-                <option value="">Categoría</option>
-                <option>Trabajo</option>
-                <option>Personal</option>
-              </select>
-          
-              <select class="filter" id="prioridad">
-                <option value="">Prioridad</option>
-                <option>Alta</option>
-                <option>Media</option>
-                <option>Baja</option>
-              </select>
-          
+              <div class="data-filter">
+                <label for="categoria">Categoria</label>
+                <select class="filter" id="categoria">
+                  <option value="">Seleccione</option>
+                  <option>Trabajo</option>
+                  <option>Personal</option>
+                </select>
+              </div>
+              <div class="data-filter">
+                <label for="prioridad">Prioridad</label>
+                <select class="filter" id="prioridad">
+                  <option value="">Seleccione</option>
+                  <option>Alta</option>
+                  <option>Media</option>
+                  <option>Baja</option>
+                </select>
+              </div>
               <button class="btn btn--ghost btn--sm" id="toggleFilters">
                 Filtros
               </button>
             </div>
             <!-- Filtros avanzados -->
             <div class="task-filters__advanced" id="advancedFilters">
-              <select class="filter" id="estado">
-                <option value="">Estado</option>
-                <option>Pendiente</option>
-                <option>Completada</option>
-                <option>Vencida</option>
-              </select>
-              <input type="date" id="desde" class="filter" />
-              <input type="date" id="hasta" class="filter" />
+              <div class="data-filter">
+                <label for="estado">Estado</label>
+                <select class="filter" id="estado" aria-placeholder="Seleccione">
+                  <option value="">Seleccione</option>
+                  <option>Pendiente</option>
+                  <option>Completada</option>
+                  <option>Vencida</option>
+                </select>
+              </div>
+              <div class="data-filter">
+                <label for="desde">Desde</label>
+                <input type="date" id="desde" class="filter" />
+              </div>
+              <div class="data-filter">
+                <label for="hasta">Hasta</label>
+                <input type="date" id="hasta" class="filter" />
+              </div>
               <button class="btn btn--text btn--danger">
                 Limpiar
               </button>
