@@ -3,6 +3,9 @@ const menuToggle = document.getElementById("menuToggle");
 const menuClose = document.getElementById("menu-close-btn");
 const overlay = document.getElementById("overlay");
 const logoutBtn = document.getElementById("logoutBtn");
+// Elementos para los filtros
+const toggleBtn = document.getElementById("toggleFilters");
+const advancedFilters = document.getElementById("advancedFilters");
 
 const menuState = {
   isOpen: false,  // false | true
@@ -29,6 +32,7 @@ if (sidebar) {
 // Delegación de veentos
 document.addEventListener("keydown", (e) => {  
   // Valida que solo se puede cerrar el menu cuando el sidebar conetnga la clase open
+  if (!sidebar) return
   const open = sidebar.classList.contains("open");
   if (e.key === "Escape" && open) {
     toggleMenu();
@@ -53,3 +57,10 @@ if (sidebar) {
    toggleMenu();
  }); 
 }
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    advancedFilters.classList.toggle("open");
+  });  
+}
+

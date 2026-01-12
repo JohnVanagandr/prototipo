@@ -40,28 +40,41 @@
         <p>Organiza y prioriza tu trabajo</p>
       </header>
 
-      <!-- Filtros -->
-      <section class="tasks-filters">
-        <div class="form-group">
-          <select id="categoria">
-            <option value="">Todas las categorías</option>
-            <option value="trabajo">Trabajo</option>
-            <option value="estudio">Estudio</option>
-            <option value="diseno">Diseño</option>
-            <option value="personal">Personal</option>
-            <option value="organizacion">Organización</option>
-            <option value="mantenimiento">Mantenimiento</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <select id="prioridad">
-            <option value="">Todas las prioridades</option>
-            <option value="high">Alta</option>
-            <option value="medium">Media</option>
-            <option value="low">Baja</option>
-          </select>
-        </div>
-      </section>
+          <section class="task-filters">
+            <!-- Filtros principales -->
+            <div class="task-filters__main">
+              <select class="filter" id="categoria">
+                <option value="">Categoría</option>
+                <option>Trabajo</option>
+                <option>Personal</option>
+              </select>
+          
+              <select class="filter" id="prioridad">
+                <option value="">Prioridad</option>
+                <option>Alta</option>
+                <option>Media</option>
+                <option>Baja</option>
+              </select>
+          
+              <button class="btn btn--ghost btn--sm" id="toggleFilters">
+                Filtros
+              </button>
+            </div>
+            <!-- Filtros avanzados -->
+            <div class="task-filters__advanced" id="advancedFilters">
+              <select class="filter" id="estado">
+                <option value="">Estado</option>
+                <option>Pendiente</option>
+                <option>Completada</option>
+                <option>Vencida</option>
+              </select>
+              <input type="date" id="desde" class="filter" />
+              <input type="date" id="hasta" class="filter" />
+              <button class="btn btn--text btn--danger">
+                Limpiar
+              </button>
+            </div>
+          </section>
 
         <!-- Listado de tareas -->
         <section class="grid grid-cols-1 md:grid-cols-2 tasks-list">
