@@ -6,6 +6,7 @@
   pointer-events: none;
   transition: opacity var(--transition-base);
   z-index: var(--z-overlay);
+  backdrop-filter: blur(2px);
 }
 
 .overlay.active {

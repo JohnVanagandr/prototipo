@@ -6,6 +6,12 @@ const logoutBtn = document.getElementById("logoutBtn");
 // Elementos para los filtros
 const toggleBtn = document.getElementById("toggleFilters");
 const advancedFilters = document.getElementById("advancedFilters");
+// Elementos para el modal de confirmación
+const modal = document.getElementById("modalEliminar");
+const modalOverlay = document.querySelector(".modal__overlay");
+const btnOpen = document.querySelector(".delete");
+const btnClose = document.getElementById("btnCancelar");
+const taskList = document.getElementById("taskList");
 
 const menuState = {
   isOpen: false,  // false | true
@@ -13,7 +19,7 @@ const menuState = {
   path: location, // 'home' | 'detail' | 'etc'
 };
 
-const toggleMenu = () => {
+const toggleMenu = () => {  
   sidebar.classList.toggle("open");
   overlay.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
@@ -41,6 +47,8 @@ document.addEventListener("keydown", (e) => {
 
 menuToggle.addEventListener("click", (e) => {
   const link = e.target.closest("[data-route]");
+  console.log(link);
+  
   if (link) {
     const route = link.dataset.route;
     window.location.href = `${route}.html`;
@@ -64,3 +72,38 @@ if (toggleBtn) {
   });  
 }
 
+// Función para abrir
+function openModal() {
+  modal.classList.add("modal--visible");
+}
+
+// Función para cerrar
+function closeModal() {
+  modal.classList.remove("modal--visible");
+}
+
+// Eventos
+if (btnClose) {
+  btnClose.addEventListener("click", closeModal);
+}
+if (modalOverlay) {
+  // Si haces clic fuera del contenido, también se cierra
+  modalOverlay.addEventListener("click", closeModal);
+}
+
+if (taskList) {
+  // 1. Delegación de eventos en el contenedor PADRE
+  taskList.addEventListener("click", (e) => {
+    // Buscamos si el clic (o el clic en el icono de adentro) pertenece al botón
+    const deleteBtn = e.target.closest(".delete-btn");
+    if (deleteBtn) {
+      // Obtenemos el nombre de la tarea desde el atributo data
+      const taskName = deleteBtn.getAttribute("data-task");
+      const modalText = modal.querySelector(".modal__text");
+      // Personalizamos el mensaje del modal
+      modalText.innerHTML = `Esta acción no se puede deshacer. La tarea <strong>"${taskName}"</strong> se borrará permanentemente.`;
+      // Abrimos el modal
+      modal.classList.add("modal--visible");
+    }
+  });
+}

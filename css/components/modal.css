@@ -1,0 +1,92 @@
+/* Bloque Principal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Modificador para mostrar */
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Overlay (Fondo oscuro) */
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Contenedor del contenido */
+.modal__container {
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 25px;
+  /* Siguiendo tus cards */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal--visible .modal__container {
+  transform: scale(1);
+}
+
+/* Elementos internos */
+.modal__title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal__text {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.modal__footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Botones */
+.modal__button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal__button--cancel {
+  background: transparent;
+  color: #888;
+}
+
+.modal__button--confirm {
+  background-color: var(--color-danger-500);
+  /* Rojo basado en tu icono de basura */
+  color: white;
+}
+
+.modal__button:hover {
+  opacity: 0.8;
+}

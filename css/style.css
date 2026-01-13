@@ -15,6 +15,7 @@
 @import url('components/buttons.css');
 @import url('components/fab.css');
 @import url('components/filter.css');
+@import url('components/modal.css');
 
 @import url('views/auth.css');
 @import url('views/home.css');

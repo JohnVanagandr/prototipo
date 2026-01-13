@@ -24,202 +24,223 @@
     <a href="task.html" class="fab" aria-label="Crear nueva tarea">
       <i class='bx bx-plus'></i>
     </a>
+
+      <!-- Ventana modal -->
+      <div class="modal" id="modalEliminar">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">¿Eliminar tarea?</h2>
+          </div>
+          <div class="modal__body">
+            <p class="modal__text">Esta acción no se puede deshacer. La tarea <strong>"Preparar presentación"</strong> se
+              borrará permanentemente.</p>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__button modal__button--cancel" id="btnCancelar">Cancelar</button>
+            <button class="modal__button modal__button--confirm" id="btnConfirmar">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Contenido principal -->
       <main id="appContent" class="content">
         
         <section class="tasks-view">
         
           <!-- Header -->
-        <header class="tasks-header">
-          <div class="tasks-header-top">
-            <h1>Tareas</h1>
-            <span class="badge badge--dark tasks-counter">12</span>
-          </div>
-          <p>Organiza y prioriza tu trabajo</p>
-        </header>
-        
-          <!-- Filtros -->
-          <section class="task-filters">
-            <!-- Filtros principales -->
-            <div class="task-filters__main">
-              <div class="data-filter">
-                <label for="categoria">Categoria</label>
-                <select class="filter" id="categoria">
-                  <option value="">Seleccione</option>
-                  <option>Trabajo</option>
-                  <option>Personal</option>
-                </select>
-              </div>
-              <div class="data-filter">
-                <label for="prioridad">Prioridad</label>
-                <select class="filter" id="prioridad">
-                  <option value="">Seleccione</option>
-                  <option>Alta</option>
-                  <option>Media</option>
-                  <option>Baja</option>
-                </select>
-              </div>
-              <button class="btn btn--ghost btn--sm" id="toggleFilters">
-                Filtros
-              </button>
+          <header class="tasks-header">
+            <div class="tasks-header-top">
+              <h1>Tareas</h1>
+              <span class="badge badge--dark tasks-counter">12</span>
             </div>
-            <!-- Filtros avanzados -->
-            <div class="task-filters__advanced" id="advancedFilters">
-              <div class="data-filter">
-                <label for="estado">Estado</label>
-                <select class="filter" id="estado" aria-placeholder="Seleccione">
-                  <option value="">Seleccione</option>
-                  <option>Pendiente</option>
-                  <option>Completada</option>
-                  <option>Vencida</option>
-                </select>
+            <p>Organiza y prioriza tu trabajo</p>
+          </header>
+          
+            <!-- Filtros -->
+            <section class="task-filters">
+              <!-- Filtros principales -->
+              <div class="task-filters__main">
+                <div class="data-filter">
+                  <label for="categoria">Categoria</label>
+                  <select class="filter" id="categoria">
+                    <option value="">Seleccione</option>
+                    <option>Trabajo</option>
+                    <option>Personal</option>
+                  </select>
+                </div>
+                <div class="data-filter">
+                  <label for="prioridad">Prioridad</label>
+                  <select class="filter" id="prioridad">
+                    <option value="">Seleccione</option>
+                    <option>Alta</option>
+                    <option>Media</option>
+                    <option>Baja</option>
+                  </select>
+                </div>
+                <button class="btn btn--ghost btn--sm" id="toggleFilters">
+                  Filtros
+                </button>
               </div>
-              <div class="data-filter">
-                <label for="desde">Desde</label>
-                <input type="date" id="desde" class="filter" />
+              <!-- Filtros avanzados -->
+              <div class="task-filters__advanced" id="advancedFilters">
+                <div class="data-filter">
+                  <label for="estado">Estado</label>
+                  <select class="filter" id="estado" aria-placeholder="Seleccione">
+                    <option value="">Seleccione</option>
+                    <option>Pendiente</option>
+                    <option>Completada</option>
+                    <option>Vencida</option>
+                  </select>
+                </div>
+                <div class="data-filter">
+                  <label for="desde">Desde</label>
+                  <input type="date" id="desde" class="filter" />
+                </div>
+                <div class="data-filter">
+                  <label for="hasta">Hasta</label>
+                  <input type="date" id="hasta" class="filter" />
+                </div>
+                <button class="btn btn--text btn--danger">
+                  Limpiar
+                </button>
               </div>
-              <div class="data-filter">
-                <label for="hasta">Hasta</label>
-                <input type="date" id="hasta" class="filter" />
+            </section>
+          <!-- Listado de tareas -->
+          <section id="taskList" class="grid grid-cols-1 md:grid-cols-2 tasks-list">
+          
+            <!-- 1 -->
+            <article class="card priority-high">
+              <header class="card__header">
+                <h3 class="card__title">
+                  Preparar presentación del sprint
+                </h3>
+                <button class="btn btn--icon text-danger delete-btn" data-task="Preparar presentación del sprint">
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </header>
+              <div class="card__body">
+                <p class="card__text">
+                  Organizar diapositivas y puntos clave para la reunión del equipo.
+                </p>
               </div>
-              <button class="btn btn--text btn--danger">
-                Limpiar
-              </button>
-            </div>
+              <footer class="card__footer">
+                <div class="card__meta">
+                  <span class="task-priority">Alta</span>
+                  <span class="task-category">Trabajo</span>
+                  <span class="task-date">Hoy</span>
+                </div>
+                <div class="card__action">
+                  <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                  <button class="btn btn--sm btn--primary">Completada</button>
+                </div>
+              </footer>
+            </article>
+          
+            <!-- 2 -->
+            <article class="card priority-high">
+              <header class="card__header">
+                <h3 class="card__title">Corregir errores de la vista de tareas</h3>
+                <button class="btn btn--icon text-danger delete-btn" data-task="Corregir errores de la vista de tareas">
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </header>
+              <div class="card__body">
+                <p class="card__text">
+                  Ajustar filtros y estilos en la vista de tareas pendientes.
+                </p>
+              </div>
+              <footer class="card__footer">
+                <div class="card__meta">
+                  <span class="task-priority">Alta</span>
+                  <span class="task-category">Trabajo</span>
+                  <span class="task-date">Esta semana</span>
+                </div>
+                <div class="card__action">
+                  <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                  <a class="btn btn--sm btn--primary">Completada</a>
+                </div>
+              </footer>
+            </article>
+          
+            <!-- 3 -->
+            <article class="card priority-medium">
+              <header class="card__header">
+                <h3 class="card__title">Estudiar promesas en JavaScript</h3>
+                <button class="btn btn--icon text-danger delete-btn" data-task="Estudiar promesas en JavaScript">
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </header>
+              <div class="card__body">
+                <p class="card__text">
+                  Repasar encadenamiento y manejo de errores.
+                </p>
+              </div>
+              <footer class="card__footer">
+                <div class="card__meta">
+                  <span class="task-priority">Media</span>
+                  <span class="task-category">Estudio</span>
+                  <span class="task-date">Esta semana</span>
+                </div>
+                <div class="card__action">
+                  <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                  <a class="btn btn--sm btn--primary">Completada</a>
+                </div>
+              </footer>
+            </article>
+          
+            <!-- 4 -->
+            <article class="card priority-medium">
+              <header class="card__header">
+                <h3 class="card__title">Diseñar cards reutilizables en CSS</h3>
+                <button class="btn btn--icon text-danger delete-btn" data-task="Diseñar cards reutilizables en CSS">
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </header>
+              <div class="card__body">
+                <p class="card__text">
+                  Crear componentes visuales para tareas y estados.
+                </p>
+              </div>
+              <footer class="card__footer">
+                <div class="card__meta">
+                  <span class="task-priority">Media</span>
+                  <span class="task-category">Diseño</span>
+                  <span class="task-date">Próximos días</span>
+                </div>
+                <div class="card__action">
+                  <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                  <a class="btn btn--sm btn--primary">Completada</a>
+                </div>
+              </footer>
+            </article>
+          
+            <!-- 5 -->
+            <article class="card priority-low">
+              <header class="card__header">
+                <h3 class="card__title">Comprar víveres de la semana</h3>
+                <button class="btn btn--icon text-danger delete-btn" data-task="Comprar víveres de la semana">
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </header>
+              <div class="card__body">
+                <p class="card__text">
+                  Frutas, verduras y productos básicos.
+                </p>
+              </div>
+              <footer class="card__footer">
+                <div class="card__meta">
+                  <span class="task-priority">Baja</span>
+                  <span class="task-category">Personal</span>
+                  <span class="task-date">Hoy</span>
+                </div>
+                <div class="card__action">
+                  <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
+                  <a class="btn btn--sm btn--primary">Completada</a>
+                </div>
+              </footer>
+            </article>
           </section>
-        <!-- Listado de tareas -->
-        <section class="grid grid-cols-1 md:grid-cols-2 tasks-list">
-        
-          <!-- 1 -->
-          <article class="card priority-high">
-            <header class="card__header">
-              <h3 class="card__title">Preparar presentación del sprint</h3>
-              <button class="btn btn--icon text-danger">
-                <i class='bx bxs-trash'></i>
-              </button>
-            </header>
-            <div class="card__body">
-              <p class="card__text">
-                Organizar diapositivas y puntos clave para la reunión del equipo.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__meta">
-                <span class="task-priority">Alta</span>
-                <span class="task-category">Trabajo</span>
-                <span class="task-date">Hoy</span>
-              </div>
-              <div class="card__action">
-                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
-                <button class="btn btn--sm btn--primary">Completada</button>
-              </div>
-            </footer>
-          </article>
-        
-          <!-- 2 -->
-          <article class="card priority-high">
-            <header class="card__header">
-              <h3 class="card__title">Corregir errores de la vista de tareas</h3>
-              <button class="btn btn--icon text-danger">
-                <i class='bx bxs-trash'></i>
-              </button>
-            </header>
-            <div class="card__body">
-              <p class="card__text">
-                Ajustar filtros y estilos en la vista de tareas pendientes.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__meta">
-                <span class="task-priority">Alta</span>
-                <span class="task-category">Trabajo</span>
-                <span class="task-date">Esta semana</span>
-              </div>
-              <div class="card__action">
-                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
-                <a class="btn btn--sm btn--primary">Completada</a>
-              </div>
-            </footer>
-          </article>
-        
-          <!-- 3 -->
-          <article class="card priority-medium">
-            <header class="card__header">
-              <h3 class="card__title">Estudiar promesas en JavaScript</h3>
-              <button class="btn btn--icon text-danger">
-                <i class='bx bxs-trash'></i>
-              </button>
-            </header>
-            <div class="card__body">
-              <p class="card__text">
-                Repasar encadenamiento y manejo de errores.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__meta">
-                <span class="task-priority">Media</span>
-                <span class="task-category">Estudio</span>
-                <span class="task-date">Esta semana</span>
-              </div>
-              <div class="card__action">
-                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
-                <a class="btn btn--sm btn--primary">Completada</a>
-              </div>
-            </footer>
-          </article>
-        
-          <!-- 4 -->
-          <article class="card priority-medium">
-            <header class="card__header">
-              <h3 class="card__title">Diseñar cards reutilizables en CSS</h3>
-              <button class="btn btn--icon text-danger">
-                <i class='bx bxs-trash'></i>
-              </button>
-            </header>
-            <div class="card__body">
-              <p class="card__text">
-                Crear componentes visuales para tareas y estados.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__meta">
-                <span class="task-priority">Media</span>
-                <span class="task-category">Diseño</span>
-                <span class="task-date">Próximos días</span>
-              </div>
-              <div class="card__action">
-                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
-                <a class="btn btn--sm btn--primary">Completada</a>
-              </div>
-            </footer>
-          </article>
-        
-          <!-- 5 -->
-          <article class="card priority-low">
-            <header class="card__header">
-              <h3 class="card__title">Comprar víveres de la semana</h3>
-              <button class="btn btn--icon text-danger">
-                <i class='bx bxs-trash'></i>
-              </button>
-            </header>
-            <div class="card__body">
-              <p class="card__text">
-                Frutas, verduras y productos básicos.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__meta">
-                <span class="task-priority">Baja</span>
-                <span class="task-category">Personal</span>
-                <span class="task-date">Hoy</span>
-              </div>
-              <div class="card__action">
-                <a href="detail.html" class="btn btn--link btn--sm">Detalles</a>
-                <a class="btn btn--sm btn--primary">Completada</a>
-              </div>
-            </footer>
-          </article>
-        </section>
         
         </section>
 

@@ -25,6 +25,25 @@
     <a href="task.html" class="fab" aria-label="Crear nueva tarea">
       <i class='bx bx-plus'></i>
     </a>
+
+      <!-- Ventana modal -->
+      <div class="modal" id="modalEliminar">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">¿Eliminar tarea?</h2>
+          </div>
+          <div class="modal__body">
+            <p class="modal__text">Esta acción no se puede deshacer. La tarea <strong>"Preparar presentación"</strong> se
+              borrará permanentemente.</p>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__button modal__button--cancel" id="btnCancelar">Cancelar</button>
+            <button class="modal__button modal__button--confirm" id="btnConfirmar">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
     <!-- Contenido principal -->
     <main id="appContent" class="content">
 
@@ -90,13 +109,13 @@
           </section>
 
         <!-- Listado de tareas -->
-        <section class="grid grid-cols-1 md:grid-cols-2 tasks-list">
+        <section id="taskList" class="grid grid-cols-1 md:grid-cols-2 tasks-list">
 
           <!-- 1 -->
           <article class="card priority-high">
             <header class="card__header">
               <h3 class="card__title">Preparar presentación del sprint</h3>
-              <button class="btn btn--icon text-danger">
+              <button class="btn btn--icon text-danger delete-btn" data-task="Preparar presentación del sprint">
                 <i class='bx bxs-trash'></i>
               </button>
             </header>
@@ -122,7 +141,7 @@
           <article class="card priority-high">
             <header class="card__header">
               <h3 class="card__title">Corregir errores de la vista de tareas</h3>
-              <button class="btn btn--icon text-danger">
+              <button class="btn btn--icon text-danger delete-btn" data-task="Corregir errores de la vista de tareas">
                 <i class='bx bxs-trash'></i>
               </button>
             </header>
@@ -148,7 +167,7 @@
           <article class="card priority-medium">
             <header class="card__header">
               <h3 class="card__title">Estudiar promesas en JavaScript</h3>
-              <button class="btn btn--icon text-danger">
+              <button class="btn btn--icon text-danger delete-btn" data-task="Estudiar promesas en JavaScript">
                 <i class='bx bxs-trash'></i>
               </button>
             </header>
@@ -174,7 +193,7 @@
           <article class="card priority-medium">
             <header class="card__header">
               <h3 class="card__title">Diseñar cards reutilizables en CSS</h3>
-              <button class="btn btn--icon text-danger">
+              <button class="btn btn--icon text-danger delete-btn" data-task="Diseñar cards reutilizables en CSS">
                 <i class='bx bxs-trash'></i>
               </button>
             </header>
@@ -200,7 +219,7 @@
           <article class="card priority-low">
             <header class="card__header">
               <h3 class="card__title">Comprar víveres de la semana</h3>
-              <button class="btn btn--icon text-danger">
+              <button class="btn btn--icon text-danger delete-btn" data-task="Comprar víveres de la semana">
                 <i class='bx bxs-trash'></i>
               </button>
             </header>

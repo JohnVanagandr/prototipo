@@ -28,11 +28,29 @@
       <i class='bx bx-plus'></i>
     </a>
 
+      <!-- Ventana modal -->
+      <div class="modal" id="modalEliminar">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">¿Eliminar tarea?</h2>
+          </div>
+          <div class="modal__body">
+            <p class="modal__text">Esta acción no se puede deshacer. La tarea <strong>"Preparar presentación"</strong> se
+              borrará permanentemente.</p>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__button modal__button--cancel" id="btnCancelar">Cancelar</button>
+            <button class="modal__button modal__button--confirm" id="btnConfirmar">Eliminar</button>
+          </div>
+        </div>
+      </div>
+
     <!-- Contenido principal -->
     <main id="appContent" class="content">
       <!-- Vistas dinámicas -->
 
-      <section class="task-detail-view">
+      <section id="taskList" class="task-detail-view">
       
         <header class="task-detail-header">
           <h1>Detalle de la tarea</h1>
@@ -43,7 +61,7 @@
             <h2 class="card-detail__title">
               Preparar presentación del proyecto
             </h2>
-            <button class="btn btn--icon text-danger">
+            <button class="btn btn--icon text-danger delete-btn" data-task="Preparar presentación del proyecto">
               <i class='bx bxs-trash'></i>
             </button>
           </header>
