@@ -7,20 +7,54 @@
 
 .task-filters__main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 60px;
+  grid-template-columns: repeat(2, 1fr) 90px;
   gap: var(--space-xs);
   align-items: end;
 }
 
 .task-filters__advanced {
-  display: none;
-  margin-top: var(--space-md);
+  /* En lugar de display: none, usamos estas propiedades para permitir animación */
+  display: grid;
+  grid-template-rows: 0fr;
+  /* La clave: empezamos con fila en 0 */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.4s ease,
+    opacity 0.3s ease,
+    margin-top 0.4s ease;
+
+  margin-top: 0;
+  /* Evitamos saltos de espacio cuando está cerrado */
+  overflow: hidden;
+}
+
+/* El contenido interno necesita un envoltorio para que el truco del grid funcione */
+.task-filters__advanced-inner {
+  min-height: 0;
+  display: grid;
   gap: var(--space-md);
   align-items: end;
 }
 
+/* Modificador cuando está abierto */
 .task-filters__advanced.open {
-  display: grid;
+  grid-template-rows: 1fr;
+  /* Se expande al tamaño del contenido */
+  opacity: 1;
+  visibility: visible;
+  margin-top: var(--space-md);
+}
+
+/* 2. Estado Activo: Solo definimos el cambio de ángulo */
+.btn--active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Rotación del icono cuando el padre está activo */
+.btn--active .toggle-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
 .data-filter {
@@ -49,7 +83,7 @@
 }
 
 @media (min-width: 768px) {
-  .task-filters__advanced.open {
+  .task-filters__advanced-inner {
     grid-template-columns: repeat(3, 1fr) 100px;
   }
 }

@@ -146,6 +146,10 @@
 .btn--ghost {
   background-color: transparent;
   color: var(--color-dark-700);
+  border: 1px solid var(--border-color, #e0e0e0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transición fluida */
+  cursor: pointer;
 }
 
 .btn--ghost:hover {
@@ -209,4 +213,33 @@
 
 .btn--link:hover {
   text-decoration: underline;
+}
+
+/**
+===========================
+Button - activo
+===========================
+*/
+.btn--active {
+  background-color: var(--color-primary-500);
+  /* El amarillo de tu cabecera */
+  border-color: var(--color-primary-700);
+  color: var(--color-dark-500);
+  /* Texto oscuro para contraste */
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 4px 12px rgba(241, 219, 75, 0.3);
+  box-shadow: var(--shadow-active);
+}
+
+.toggle-icon {
+  display: inline-block;
+  /* ¡IMPORTANTE! Los elementos inline no se pueden rotar */
+
+  font-size: 1.2rem;
+
+  /* Definimos la transición aquí para que afecte tanto al abrir como al cerrar */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Estado inicial */
+  transform: rotate(0deg);
 }

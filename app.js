@@ -89,7 +89,13 @@ if (sidebar) {
 
 if (toggleBtn) {
   toggleBtn.addEventListener("click", () => {
-    advancedFilters.classList.toggle("open");
+    const isOpen = advancedFilters.classList.toggle("open");
+    // Opcional: Cambiar el estilo del botón cuando esté activo
+    if (isOpen) {
+      toggleBtn.classList.add("btn--active"); // Podrías ponerle el fondo amarillo de tu diseño
+    } else {
+      toggleBtn.classList.remove("btn--active");
+    }
   });  
 }
 
