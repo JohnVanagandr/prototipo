@@ -11,6 +11,8 @@ const modal = document.getElementById("modalEliminar");
 const modalOverlay = document.querySelector(".modal__overlay");
 const btnOpen = document.querySelector(".delete");
 const btnClose = document.getElementById("btnCancelar");
+const btnConfirmar = document.getElementById("btnConfirmar");
+const modalError = document.getElementById("modalError");
 const taskList = document.getElementById("taskList");
 
 const menuState = {
@@ -25,6 +27,21 @@ const toggleMenu = () => {
   document.body.classList.toggle("no-scroll");
   menuState.isOpen = menuState.isOpen ? false : true;
 }
+
+// Simulación de API con Promesa para eliminar tareas
+const eliminarTareaAPI = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Simulamos éxito el 80% de las veces
+      const exito = Math.random() > 0.2;
+      if (exito) {
+        resolve("Tarea eliminada correctamente");
+      } else {
+        reject("Error de conexión. Inténtalo de nuevo.");
+      }
+    }, 2000); // 2 segundos de carga
+  });
+};
 
 /**
  * Captura el evento click de todo el contenido del elemento (todos lo hijos)
@@ -93,7 +110,7 @@ if (modalOverlay) {
 
 if (taskList) {
   // 1. Delegación de eventos en el contenedor PADRE
-  taskList.addEventListener("click", (e) => {
+  taskList.addEventListener("click",async (e) => {
     // Buscamos si el clic (o el clic en el icono de adentro) pertenece al botón
     const deleteBtn = e.target.closest(".delete-btn");
     if (deleteBtn) {
@@ -104,6 +121,35 @@ if (taskList) {
       modalText.innerHTML = `Esta acción no se puede deshacer. La tarea <strong>"${taskName}"</strong> se borrará permanentemente.`;
       // Abrimos el modal
       modal.classList.add("modal--visible");
+    }
+  });
+}
+
+// Evento para simular eliminar una tarea en el Modal.
+if (btnConfirmar) {
+  btnConfirmar.addEventListener("click", async () => {
+    // 1. Estado de carga (BEM)
+    btnConfirmar.classList.add("modal__button--loading");
+    btnConfirmar.disabled = true;
+    btnCancelar.disabled = true;
+    modalError.classList.remove("modal__error-message--visible");
+
+    try {
+      // 2. Ejecutar la promesa
+      await eliminarTareaAPI();
+
+      // 3. Si tiene éxito, cerramos modal
+      modal.classList.remove("modal--visible");
+      console.log("Tarea borrada del DOM");
+    } catch (error) {
+      // 4. Si hay error, lo mostramos
+      modalError.textContent = error;
+      modalError.classList.add("modal__error-message--visible");
+    } finally {
+      // 5. Quitamos el estado de carga pase lo que pase
+      btnConfirmar.classList.remove("modal__button--loading");
+      btnConfirmar.disabled = false;
+      btnCancelar.disabled = false;
     }
   });
 }

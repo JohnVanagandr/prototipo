@@ -33,12 +33,20 @@
             <h2 class="modal__title">¿Eliminar tarea?</h2>
           </div>
           <div class="modal__body">
-            <p class="modal__text">Esta acción no se puede deshacer. La tarea <strong>"Preparar presentación"</strong> se
-              borrará permanentemente.</p>
+            <p class="modal__text">
+              Esta acción no se puede deshacer. La tarea <strong>"Preparar presentación"</strong> se
+              borrará permanentemente.
+            </p>
+            <p class="modal__error-message" id="modalError"></p>
           </div>
           <div class="modal__footer">
             <button class="modal__button modal__button--cancel" id="btnCancelar">Cancelar</button>
-            <button class="modal__button modal__button--confirm" id="btnConfirmar">Eliminar</button>
+            <button class="modal__button modal__button--confirm" id="btnConfirmar">
+              <span class="modal__button-text">Eliminar</span>
+              <span class="modal__button-spinner">
+                <i class='bx bx-loader-alt bx-spin'></i>
+              </span>
+            </button>
           </div>
         </div>
       </div>

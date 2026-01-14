@@ -57,7 +57,7 @@
 .modal__text {
   color: #666;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-sm);
 }
 
 .modal__footer {
@@ -83,10 +83,88 @@
 
 .modal__button--confirm {
   background-color: var(--color-danger-500);
-  /* Rojo basado en tu icono de basura */
   color: white;
 }
 
 .modal__button:hover {
   opacity: 0.8;
+}
+
+/* Estilos para el Spinner */
+.modal__button-spinner {
+  display: none;
+  /* Oculto por defecto */
+  font-size: 1.2rem;
+}
+
+/* Modificador de estado de carga */
+.modal__button--loading .modal__button-text {
+  display: none;
+}
+
+.modal__button--loading .modal__button-spinner {
+  display: inline-block;
+}
+
+/* Estilo para el botón deshabilitado durante la carga */
+.modal__button--loading {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Mensaje de error siguiendo BEM */
+.modal__error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  /* margin-top: var(--space-3xs); */
+  margin-bottom: var(--space-sm);
+  display: none;
+  /* Se muestra solo si hay error */
+}
+
+.modal__error-message--visible {
+  display: block;
+}
+
+/* Modificación al botón base */
+.modal__button--confirm {
+  background-color: #e74c3c;
+  color: white;
+  position: relative;
+  /* Necesario para el spinner absoluto */
+  min-width: 120px;
+  /* Opcional: un ancho mínimo base */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* El contenedor del texto */
+.modal__button-text {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+/* El spinner centrado */
+.modal__button-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centrado perfecto */
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  font-size: 1.4rem;
+}
+
+/* ESTADO DE CARGA (BEM Modifier) */
+.modal__button--loading .modal__button-text {
+  opacity: 0;
+  /* El texto sigue ahí ocupando espacio, pero no se ve */
+}
+
+.modal__button--loading .modal__button-spinner {
+  opacity: 1;
+  visibility: visible;
 }
