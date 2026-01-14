@@ -1,3 +1,18 @@
+/* Animación de sacudida */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  20%, 60% {
+    transform: translateX(-10px);
+  }
+
+  40%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 /* Bloque Principal */
 .modal {
   position: fixed;
@@ -39,6 +54,7 @@
   border-radius: 25px;
   /* Siguiendo tus cards */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: var(--border-default);
   transform: scale(0.8);
   transition: transform 0.3s ease;
 }
@@ -112,10 +128,17 @@
   opacity: 0.7;
 }
 
+/* Aplicamos la animación al contenedor del modal */
+.modal--error .modal__container {
+  animation: shake 0.4s ease-in-out;
+  border: var(--border-warning);
+  /* Opcional: borde rojo momentáneo */
+}
+
 /* Mensaje de error siguiendo BEM */
 .modal__error-message {
   color: #e74c3c;
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   /* margin-top: var(--space-3xs); */
   margin-bottom: var(--space-sm);
   display: none;
@@ -132,7 +155,7 @@
   color: white;
   position: relative;
   /* Necesario para el spinner absoluto */
-  min-width: 120px;
+  min-width: 100px;
   /* Opcional: un ancho mínimo base */
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -141,7 +164,6 @@
 .modal__button-text {
   display: inline-block;
   transition: opacity 0.2s ease;
-  opacity: 1;
 }
 
 /* El spinner centrado */

@@ -15,6 +15,9 @@ const btnConfirmar = document.getElementById("btnConfirmar");
 const modalError = document.getElementById("modalError");
 const taskList = document.getElementById("taskList");
 
+// Referencia para eliminar la card, esta referencia el global.
+let cardAEliminar = null; // Referencia temporal
+
 const menuState = {
   isOpen: false,  // false | true
   action: 'menu', // 'menu' | 'back'
@@ -34,6 +37,7 @@ const eliminarTareaAPI = (id) => {
     setTimeout(() => {
       // Simulamos éxito el 80% de las veces
       const exito = Math.random() > 0.2;
+      // const exito = false;
       if (exito) {
         resolve("Tarea eliminada correctamente");
       } else {
@@ -114,6 +118,8 @@ if (taskList) {
     // Buscamos si el clic (o el clic en el icono de adentro) pertenece al botón
     const deleteBtn = e.target.closest(".delete-btn");
     if (deleteBtn) {
+      // Guardamos la card completa (el padre del botón)
+      cardAEliminar = deleteBtn.closest(".card");
       // Obtenemos el nombre de la tarea desde el atributo data
       const taskName = deleteBtn.getAttribute("data-task");
       const modalText = modal.querySelector(".modal__text");
@@ -137,14 +143,26 @@ if (btnConfirmar) {
     try {
       // 2. Ejecutar la promesa
       await eliminarTareaAPI();
-
       // 3. Si tiene éxito, cerramos modal
       modal.classList.remove("modal--visible");
-      console.log("Tarea borrada del DOM");
+      if (cardAEliminar) {
+        cardAEliminar.classList.add("card--removing");
+        // Esperamos a que termine la animación CSS (500ms) para borrar del DOM
+        setTimeout(() => {
+          cardAEliminar.remove();
+          cardAEliminar = null; // Limpiamos referencia
+        }, 500);
+      }
     } catch (error) {
       // 4. Si hay error, lo mostramos
+      modal.classList.add("modal--error"); // Dispara el shake
       modalError.textContent = error;
       modalError.classList.add("modal__error-message--visible");
+
+      // Removemos la clase de error después de la animación para que pueda volver a vibrar
+      setTimeout(() => {
+        modal.classList.remove("modal--error");
+      }, 1500);
     } finally {
       // 5. Quitamos el estado de carga pase lo que pase
       btnConfirmar.classList.remove("modal__button--loading");

@@ -6,7 +6,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+}
+
+/* Modificador para eliminar la card con estilo */
+.card--removing {
+  opacity: 0;
+  transform: translateX(30px);
+  /* Se desliza un poco a la derecha */
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  /* Evita interacciones mientras desaparece */
 }
 
 .card:hover {
